@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css links -->
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+    <link type="text/css" rel="stylesheet" href="css/newmeeting.css" />
+    <link type="text/css" rel="stylesheet" href="css/checkbox.css" />
+    <link type="text/css" rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="webfontkit-20201125-062530/stylesheet.css"
+    />
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png" />
+    <!-- title -->
+    <title>ADG | Admin Portal</title>
+  </head>
+  <body>
+    <div class="left">
+      <!--NAVBAR Starts-->
+      <nav class="nav-active" id="navbar">
+        <!-- Logo in Navbar -->
+        <div class="logonav">
+          <img class="logo" src="icons/Group 2.svg" />
+        </div>
+
+        <!-- Nav Links -->
+        <ul class="navlinks">
+          <li>
+            <a href="newmeet.html">
+            <img class="icon" src="icons/meetings.svg" alt="" />
+            <b>Meetings</b><br/></a>
+
+            <div class="meeting-radio">
+              <ul>
+                <li class="inner">
+                  <a href="newmeet.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                    checked
+                  />
+                  <label for="new" style="cursor: pointer;"><b>New</label></b><br/>
+                </a>
+                </li>
+                <li class="inner">
+                  <a href="scheduledmeet.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="tasks.html">
+            <img class="icon" src="icons/task.svg" alt="" />
+             Tasks
+            </a>
+          </li>
+
+          <li>
+            <a href="newmom.html">
+            <img class="icon" src="icons/mom.svg" alt="" />
+             MOM</a>
+             <div class="meeting-radio">
+              <ul>
+                <li class="inner">
+                  <a href="newmom.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">New</label><br/>
+                </a>
+                </li>
+                <li class="inner">
+                  <a href="scheduledmom.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="members.html">
+            <img class="icon" src="icons/members.svg" alt="" />
+             Members
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--NAVBAR Ends-->
+      <div class="out">
+        <button class="logout" onclick="logout()">Log Out</button>
+      </div>
+    </div>
+
+    <form action="" id="newMeetingForm">
+      <div class="middle">
+        <h2>Meetings</h2>
+        <h4>Schedule a New Meeting</h4>
+        <br /><br />
+        <h3>Add Details</h3>
+        <br />
+        <div class="newmeetform">
+          <label for="name" class="date">Date:</label>
+          <input type="datetime-local" id="date" name="date" required/><br /><br />
+
+          <label for="name" class="title">Title:</label>
+          <input type="text" id="title" name="title" required/><br /><br />
+
+          <label for="name" class="venue">Venue:</label>
+          <input type="text" id="venue" name="venue" /><br /><br />
+
+          <label for="name" class="link">Link:</label>
+          <input type="url" id="link" name="link" required/>
+        </div>
+        <br><br>
+        <button class="post-meeting-btn" id="post-meeting-btn1" type="submit">
+          Post Meeting
+        </button>
+      </div>
+
+      <div class="right">
+        <h3 class="add-teams-text">Add Teams</h3>
+        <div class="container">
+          <ul class="ks-cboxtags">
+            <li>
+              <input
+                type="radio"
+                id="checkboxOne"
+                name="t[]"
+                data-value=""
+                data-id="teams"
+                value="z"
+              />
+              <label for="checkboxOne">Core</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="checkboxTwo"
+                name="t[]"
+                data-value="0" 
+                data-id="teams"
+                value="0"
+              />
+              <label for="checkboxTwo">iOS</label>
+            </li>
+            <li>
+              <input 
+              type="radio" 
+              id="checkboxThree" 
+              name="t[]"
+              data-value="1" 
+              data-id="teams"
+              value="1"
+              />
+              <label for="checkboxThree">Web</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="checkboxFour"
+                name="t[]"
+                data-value="2" 
+                data-id="teams"
+                value="2"
+              />
+              <label for="checkboxFour">Android</label>
+            </li>
+            <li>
+              <input 
+              type="radio" 
+              id="checkboxFive" 
+              name="t[]"
+              data-value="3" 
+              data-id="teams"
+              value="3"
+              />
+              <label for="checkboxFive">ML</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="checkboxSix"
+                name="t[]"
+                data-value="7" 
+                data-id="teams"
+                value="7"
+              />
+              <label for="checkboxSix">Design</label>
+            </li>
+            <br />
+            <li>
+              <input
+                type="radio"
+                id="checkboxSeven"
+                name="t[]"
+                data-value="4" 
+                data-id="teams"
+                value="4"
+              />
+              <label for="checkboxSeven">Logistics</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="checkboxEight"
+                name="t[]"
+                data-value="5" 
+                data-id="teams"
+                value="5"
+              />
+              <label for="checkboxEight">Sponsorships</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="checkboxNine"
+                name="t[]"
+                data-value="6" 
+                data-id="teams"
+                value="6"
+              />
+              <label for="checkboxNine">Marketing</label>
+            </li>
+            <li>
+              <input 
+              type="radio" 
+              id="checkboxTen" 
+              name="t[]" 
+              data-value="8" 
+              data-id="teams"
+              value="8"/>
+              <label for="checkboxTen">Video Editing</label>
+            </li>
+          </ul>
+        </div>
+
+        <br>
+        <h3 class="add-members">Add Members
+        <button id="myBtn" type="button">+</button>
+        </h3>
+    
+        <div class="selectedMembers" id="selectedMembers"></div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal" style="display: none;">
+          <!-- Modal content -->
+          <div class="modal-content" id="modal-container">
+            <span class="close">&times;</span>
+            
+            <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search for names.." autofocus title="Type in a name"><br><br>
+            
+            <div class="fetchmemberslist" id="fetchmemberslist">
+              <!-- <table id="memberslist">
+              </table> -->
+            </div>
+            <br>
+            <input id="checkAll" type="button" value="Check All">
+            <button class="add" id="add" type="button" onclick="selectedMembersDisp()">Add</button>
+          </div>
+        </div>
+        <br><br>
+      </div>
+    </form>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    
+    <script src="js/firebase.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/newmeeting.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>

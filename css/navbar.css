@@ -1,0 +1,164 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "sf_pro_displayregular";
+}
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 26px;
+  font-weight: bolder;
+  padding-bottom: 2%;
+  letter-spacing: 2.5px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.right,
+.middle {
+  width: 41%;
+  height: 100vh;
+}
+.middle {
+  float: left;
+  padding-left: 5%;
+  background-color: #F4FBFF;
+}
+.right {
+  float: left;
+  background-color: #F4FBFF;
+}
+.left {
+  float: left;
+  width: 18%;
+  background-color: white;
+  height: 100vh;
+}
+img.logo {
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  width: 70%;
+  height: auto;
+}
+li {
+  padding-left: 15%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+}
+li a {
+  font-weight: 550;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.icon {
+  height: 18px;
+  width: 18px;
+}
+
+.add-teams-text {
+  margin-top: 1%;
+  text-align: center;
+}
+.teams {
+  margin-top: -5%;
+}
+
+.post-meeting-btn {
+  width: 240px;
+  height: 40px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 18px;
+  margin-top: 3%;
+  margin-left: 20%;
+}
+
+.meeting-radio {
+  padding-left: 10%;
+  padding-top: 5%;
+  font-weight: 300;
+}
+li.inner {
+  padding: 2%;
+}
+/* li.inner input[type="radio"]:checked {
+  margin-right: 3%;
+  background-color: #000000;
+} */
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+#link,
+#date,
+select {
+  width: 305px;
+  height: 32px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Logout button */
+.out {
+  margin-top: 25vh;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: baseline;
+}
+
+button.logout {
+  background: #fff0f0;
+  border: 0.5px solid #ff0000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  color: #ff0000;
+  font-weight: 800;
+  outline: none;
+  cursor: pointer;
+}
+
+.out1{
+  margin-top: 55vh;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: baseline;
+}
+
+button.privacy{
+  background-color: #ffffff;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  font-weight: 800;
+  outline: none;
+  cursor: pointer;
+  padding: 2%;
+}

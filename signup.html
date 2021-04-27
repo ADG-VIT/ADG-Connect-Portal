@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      
+      <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+      <link type="text/css" rel="stylesheet" href="css/signup.css" />
+      <link type="text/css" rel="stylesheet" href="webfontkit-20201125-062530/stylesheet.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="icons/favicon.png" />
+      <title>ADG | Admin Portal</title>
+  </head>
+  <body>
+      <div class="left">
+          <!--NAVBAR Starts-->
+          <nav class="nav-active" id="navbar">
+            <!-- Logo in Navbar -->
+            <div class="logonav">
+              <img class="logo" src="icons/Group 2.svg" />
+            </div>
+            <!-- Nav Links -->
+            <ul class="navlinks">
+              <li>
+                <img class="icon" src="icons/login.svg" alt="" />
+                <a href="index.html">Admin Login</a>
+              </li>
+    
+              <li>
+                <img class="icon" src="icons/signup.svg" alt="" />
+                <a href="signup.html">Sign Up</a>
+                
+              </li>
+            </ul>
+          </nav>
+          <!--NAVBAR Ends-->
+          <div class="out1">
+            <a href="pp.html" target="_blank">
+            <button class="privacy">View our Privacy Policy</button></a>
+          </div>
+        </div>
+
+      <form action="" role="form" id="signupForm">
+        <div class="middle">
+            <h2>User Sign Up</h2>
+            <h4>Sign Up All Users</h4><br>
+              <label class="name" for="name">Name:</label>
+              <input type="text" id="signupName" name="name" required><br><br>
+
+              <label class="email" for="email">VIT Email:</label>
+              <input type="email" id="signupEmail" name="email" required><br><br>
+
+              <label class="regno" for="regno">Reg No:</label>
+              <input type="text" id="signupRegno" name="regno" required><br><br>
+
+              <label class="contact" for="contact">Contact No:</label>
+              <input type="text" id="signupContact" name="contact" required maxlength="10"><br><br>
+
+              <label class="password" for="password">Password:</label>
+              <input type="password" id="signupPass" name="password1" required>
+              <i class="far fa-eye" id="togglePassword1"></i><br><br>
+
+              <label class="confirmpassword" for="password">Confirm Password:</label>
+              <input type="password" id="signupPassConfirm" name="password2" required><br><br>
+
+              <!-- <label class="type" for="type">Type:</label>
+              <select name="type" id="signupType">
+                  <option value="blank"></option>
+                  <option value="member">Member</option>
+                  <option value="admin">Admin</option>
+              </select> -->
+              <br>
+        </div>
+              
+        <div class="right">
+          <h3 class="add-teams-text">Add Teams</h3><br>
+          <div class="right-1">         
+            <label class="container">iOS
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="0" data-id="teams"/>
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Web
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="1" data-id="teams"/>
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Android
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="2" data-id="teams"/> 
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Machine Learning
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="3" data-id="teams"/>
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Design
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="7" data-id="teams"/> 
+            <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="right-2">
+            <label class="container">Logistics
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="4" data-id="teams" /> 
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Sponsorships
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="5" data-id="teams"/> 
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Social Media & Marketing
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="6" data-id="teams"/> 
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Video Editing
+            <input type="checkbox" class="checkbx" name="langs[]" data-value="8" data-id="teams"/> 
+            <span class="checkmark"></span>
+            </label>
+          </div>
+            <button class="signup-btn" type="submit" id="sign-up">Sign Up</button>
+        </div>
+      </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/reg.js"></script>
+    <script src="js/signup.js"></script>
+    
+  </body>
+</html>

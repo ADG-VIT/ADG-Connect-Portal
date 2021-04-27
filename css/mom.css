@@ -1,0 +1,102 @@
+/* MOM Page */
+
+.middle-mom {
+  width: 82%;
+  float: right;
+  height: 100vh;
+  padding-left: 5%;
+  background-color: #f4fbff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#choosemeeting {
+  width: 500px;
+  height: 32px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  outline: none;
+}
+#time {
+  width: 500px;
+  height: 32px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+}
+textarea {
+  width: 500px;
+  height: 65px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Inputs for New MOM Form */
+label.choosemeeting {
+  padding-right: 16px;
+  font-size: 16px;
+}
+label.header {
+  padding-right: 76.53px;
+  font-size: 16px;
+}
+label.time {
+  padding-right: 96px;
+  font-size: 16px;
+}
+label.point {
+  padding-right: 81.7px;
+  font-size: 16px;
+}
+.points-change {
+  margin-left: 400px;
+}
+.addpoint {
+  width: 135px;
+  height: 30px;
+}
+.addpoint:hover {
+  cursor: pointer;
+}
+#minus {
+  color: red;
+}
+#minus:hover {
+  cursor: pointer;
+}
+.post-mom-btn {
+  width: 240px;
+  height: 40px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 18px;
+  margin-left: 52%;
+}
+.post-mom-btn:hover {
+  cursor: pointer;
+}
+
+.middle-mom h3{
+  position: relative;
+  display: inline-block; 
+  margin-bottom: 2%;
+  padding-bottom: 0%;
+}
+
+.middle-mom h3:before{
+  position: absolute;
+  height: 1.5px;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  display: block;
+  content: "";
+}

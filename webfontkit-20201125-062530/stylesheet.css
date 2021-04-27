@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "sf_pro_displayregular";
+	src: url("sfprodisplay-regular-webfont.woff2") format("woff2"),
+		url("sfprodisplay-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "sf_pro_displaysemibold";
+	src: url("sfprodisplay-semibold-webfont.woff2") format("woff2"),
+		url("sfprodisplay-semibold-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}

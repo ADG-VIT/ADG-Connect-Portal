@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css links -->
+    <link type="text/css" rel="stylesheet" href="css/login.css" />
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="webfontkit-20201125-062530/stylesheet.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png" />
+    <!-- title -->
+    <title>ADG | Admin Portal</title>
+  </head>
+  <body>
+    <div class="left">
+      <!--NAVBAR Starts-->
+      <nav class="nav-active" id="navbar">
+        <!-- Logo in Navbar -->
+        <div class="logonav">
+          <img class="logo" src="icons/Group 2.svg" />
+        </div>
+        <!-- Nav Links -->
+        <ul class="navlinks">
+          <li>
+            <img class="icon" src="icons/login.svg" alt="" />
+            <a href="index.html" class="">Admin Login</a>
+          </li>
+
+          <li>
+            <img class="icon" src="icons/signup.svg" alt="" />
+            <a href="signup.html" class="">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+      <!--NAVBAR Ends-->
+      <div class="out1">
+        <a href="pp.html" target="_blank">
+        <button class="privacy">View our Privacy Policy</button></a>
+      </div>
+    </div>
+
+    <div class="middle">
+      <h2>Admin Login</h2>
+      <h4>Login for only Admin/Board Members</h4>
+      <br /><br /><br />
+      <form role="form" id="signinForm">
+        <label class="user" for="userid">User ID:</label>
+        <input
+          type="text"
+          id="loginID"
+          class="form-control"
+          name="userid"
+          required
+        /><br /><br />
+        <label class="pass" for="password">Password:</label>
+        <input
+          type="password"
+          id="loginPass"
+          class="form-control"
+          name="password"
+          required
+        />
+        <i class="far fa-eye" id="togglePassword"></i>
+        <br /><br /><br />
+        <button class="login-btn" type="submit">Login</button>
+        <!-- <button class="login-btn" id="logout" onclick="signOut()">Out</button> -->
+      </form>
+    </div>
+
+    <div class="right"></div>
+  </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/logout.js"></script>
+</html>

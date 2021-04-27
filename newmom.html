@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css links -->
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+    <link type="text/css" rel="stylesheet" href="css/mom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="webfontkit-20201125-062530/stylesheet.css"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png" />
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- title -->
+    <title>ADG | Admin Portal</title>
+  </head>
+  <body>
+    <div class="left">
+      <!--NAVBAR Starts-->
+      <nav class="nav-active" id="navbar">
+        <!-- Logo in Navbar -->
+        <div class="logonav">
+          <img class="logo" src="icons/Group 2.svg" />
+        </div>
+
+        <!-- Nav Links -->
+        <ul class="navlinks">
+          <li>
+            <a href="newmeet.html">
+            <img class="icon" src="icons/meetings.svg" alt="" />
+            Meetings<br/></a>
+
+            <div class="meeting-radio">
+              <ul>
+                <li class="inner">
+                  <a href="newmeet.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">New</label><br/>
+                </a>
+                </li>
+                <li class="inner">
+                  <a href="scheduledmeet.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="tasks.html">
+            <img class="icon" src="icons/task.svg" alt="" />
+             Tasks
+            </a>
+          </li>
+
+          <li>
+            <a href="newmom.html">
+            <img class="icon" src="icons/mom.svg" alt="" />
+             <b>MOM</b></a>
+             <div class="meeting-radio">
+              <ul>
+                <li class="inner">
+                  <a href="newmom.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                    checked
+                  />
+                  <label for="new" style="cursor: pointer;"><b>New</b></label><br/>
+                </a>
+                </li>
+                <li class="inner">
+                  <a href="scheduledmom.html">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="new"
+                    style="cursor: pointer;"
+                  />
+                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="members.html">
+            <img class="icon" src="icons/members.svg" alt="" />
+             Members
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--NAVBAR Ends-->
+      <div class="out">
+        <button class="logout">Log Out</button>
+      </div>
+    </div>
+
+    <div class="middle-mom">
+      <h2>MOM</h2>
+      <h4>Post MOM of a Meeting</h4>
+      <br /><br />
+      <h3>Add Details</h3>
+      <br />
+      <form action="">
+        <div class="newmomform">
+          <label for="name" class="choosemeeting">Choose Meeting: </label>
+          <select id="choosemeeting" name="meeting" style="padding: 0%;">
+            <option value="blank"></option></select
+          ><br /><br />
+
+          <label for="name" class="header">Header:</label>
+          <textarea name="header" id="header"></textarea>
+          <br /><br />
+
+          <!-- <label for="time" class="time">Time</label>
+          <input type="datetime-local" id="time" />
+          <br /><br /> -->
+
+          <div class="newpoint" id="newpoint">
+            <div>
+              <label for="p1" class="point">Point 1:</label>
+              <textarea class="p" name="point1" id="p1"></textarea><br /><br />
+            </div>
+          </div>
+          <!--<button type="button" id="plus">+ Add Point</button>-->
+          <div class="points-change">
+            <img
+              src="icons/addpoint.svg"
+              class="addpoint"
+              id="plus"
+              alt="add point"
+            />
+            <img
+              src="icons/deletepoint.svg"
+              class="addpoint"
+              id="minus"
+              alt="delete point"
+            />
+            <br /><br /><br />
+          </div>
+          <button class="post-mom-btn" onclick="handleSubmit(event)">
+            Post MOM
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="js/mom.js"></script>
+  </body>
+</html>

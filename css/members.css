@@ -1,0 +1,68 @@
+.members-list {
+  height: 100vh;
+  background-color: #F4FBFF;;
+  padding-left: 5%;
+  width: 82%;
+  float: right;
+}
+#members {
+  display: flex;
+  align-items: left;
+  min-height: 78vh;
+  max-height: 80vh;
+  max-width: 100vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+}
+.team {
+  padding: 0.5em 0.25em;
+  margin: 0;
+  max-height: 100%;
+  min-width: 160px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: left;
+  justify-content: flex-start;
+}
+.member-card {
+  margin: 0.25em 0;
+  padding: 0.25em 0.5em 0.25em 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.member-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  align-items: left;
+}
+.member-details {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  align-items: left;
+}
+.team h2 {
+  font-size: 20px;
+  letter-spacing: normal;
+  align-items: left;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+}
+
+.team h2:before{
+  position: absolute;
+  height: 1.5px;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  display: block;
+  content: "";
+}

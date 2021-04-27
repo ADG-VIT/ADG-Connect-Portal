@@ -1,0 +1,19 @@
+/* .members { 
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+*/
+
+.add-task-btn {
+  width: 240px;
+  height: 40px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 18px;
+}
+.add-task-btn:hover{
+  cursor: pointer;
+}

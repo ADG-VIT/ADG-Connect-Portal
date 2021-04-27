@@ -1,0 +1,43 @@
+h2 {
+  font-size: 40px;
+  margin-top: 26px;
+  font-weight: bolder;
+  padding-bottom: 2%;
+  letter-spacing: 2.5px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.login-btn {
+  width: 300px;
+  height: 48px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.login-btn:hover {
+  cursor: pointer;
+}
+label.user {
+  padding-right: 6%;
+  font-size: 16px;
+}
+label.pass {
+  padding-right: 3%;
+  font-size: 16px;
+}
+/* Password */
+.fa,
+.far,
+.fas {
+  display: inline;
+}
+i {
+  margin-left: -30px;
+  cursor: pointer;
+}

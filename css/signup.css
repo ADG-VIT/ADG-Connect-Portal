@@ -1,0 +1,199 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "sf_pro_displayregular";
+}
+
+.right {
+  padding-top: 7%;
+}
+
+.signup-btn {
+  width: 300px;
+  height: 48px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-top: 15%;
+}
+.signup-btn:hover {
+  cursor: pointer;
+}
+
+/* SignUp Page inputs */
+label.name {
+  padding-right: 88.8px;
+  font-size: 16px;
+}
+label.email {
+  padding-right: 66.31px;
+  font-size: 16px;
+}
+label.regno {
+  padding-right: 79.3px;
+  font-size: 16px;
+}
+label.contact {
+  padding-right: 52.44px;
+  font-size: 16px;
+}
+label.password {
+  padding-right: 64.04px;
+  font-size: 16px;
+}
+label.confirmpassword {
+  padding-right: 6.95px;
+  font-size: 16px;
+}
+#signupType,
+#signupEmail {
+  width: 305px;
+  height: 32px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Teams Checkbox Design */
+.right-1 {
+  display: inline;
+  width: 50%;
+  float: left;
+  padding: 5%;
+}
+
+.right-2 {
+  display: inline;
+  width: 50%;
+  float: right;
+  padding: 5%;
+}
+
+h3.add-teams-text {
+  /* float: left; */
+  /* width: 100%; */
+  margin-left: 3%;
+  position: relative;
+  display: inline-block; 
+}
+
+h3.add-teams-text:before{
+  position: absolute;
+  height: 1.5px;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  display: block;
+  content: "";
+}
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: rgb(219, 219, 219);
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #0091fb;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 5px;
+  width: 3px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .middle, .right, .right-1,.right-2{
+    width: 100%  !important;
+    height: auto !important;
+    display: block;
+    float: none;
+  }
+  .right{
+    padding-top: 0%;
+  }
+  .right-1{
+    padding-bottom: 0%;
+  }
+  .right-2{
+    margin-top: 0%;
+    padding-top: 0%;
+  }
+  .add-teams-text{
+    width: 100%;
+    padding-right: 0 !important;
+    margin: 0;
+    text-align: left;
+  }
+  .signup-btn{
+    margin-left: 14%;
+    margin-top: 0%;
+    align-items: center;
+  }
+}
+
+/* Password */
+.fa,
+.far,
+.fas {
+  display: inline;
+}
+i {
+  margin-left: -30px;
+  cursor: pointer;
+}

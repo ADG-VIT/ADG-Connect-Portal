@@ -1,0 +1,66 @@
+.right {
+  padding-top: 160px;
+}
+.add-teams-text{
+text-align: left;
+padding-bottom: 5px;
+}
+.add-members{
+  padding-bottom: 5px;
+}
+#myBtn{
+  background-color: #0091FB;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+#myBtn:hover{
+  cursor: pointer;
+  border: none;
+}
+/*New Meeting Inputs */
+label.date {
+  padding-right: 2%;
+  font-size: 16px;
+}
+label.time {
+  padding-right: 2%;
+  font-size: 16px;
+}
+label.title {
+  padding-right: 3%;
+  font-size: 16px;
+}
+label.venue {
+  font-size: 16px;
+}
+label.link {
+  padding-right: 3%;
+  font-size: 16px;
+}
+.post-meeting-btn {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.middle h3, .right h3{
+  position: relative;
+  display: inline-block; 
+  margin-bottom: 3%;
+  padding-bottom: 0%;
+}
+
+.middle h3:before, .right h3:before{
+  position: absolute;
+  height: 1.5px;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  display: block;
+  content: "";
+}

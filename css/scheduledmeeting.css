@@ -1,0 +1,62 @@
+.middle {
+  width: 32%;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+}
+.fetchedMeetings {
+  padding-top: 1.5em;
+  border-right: 1px solid lightgray;
+  min-height: 100%;
+}
+.middle{
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.right {
+  padding-top: 10%;
+  text-align: left;
+  width: 50%;
+  height: 100vh;
+}
+.available {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  padding-left: 5%;
+}
+.unavailable {
+  float: right;
+  width: 50%;
+  align-items: left;
+  text-align: left;
+  height: 100vh;
+  padding-left: 5%;
+}
+.meeting {
+  padding: 15px;
+}
+.meeting:hover {
+  background-color: #ecf5fc;
+}
+.meeting p {
+  cursor: pointer;
+}
+p.bold {
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+a.post {
+  padding-left: 26%;
+  font-weight: normal;
+  font-size: 12px;
+  color: #0091fb;
+}
+.user h4 {
+  font-weight: bold;
+}
