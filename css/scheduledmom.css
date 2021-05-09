@@ -1,0 +1,38 @@
+
+.fetchedMOMS{
+    padding-top: 1.5em;
+    border-right: 1px solid lightgray;
+    max-height: 85%;
+    overflow-y: scroll;
+    padding-bottom: 1.5em;
+}
+.MOM{
+    padding: 15px;
+    cursor: pointer;
+}
+.MOM:hover{
+    background-color: #ecf5fc;
+}
+.momdetails{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.momheading{
+    font-size: 20px;
+    font-weight: bold;
+}
+.mompoint{
+    list-style-type: circle;
+    color: black;
+    text-decoration: none;
+    line-height: normal;
+    font-weight: normal;
+}
+.momdetails ul{
+    padding: 0;
+    margin: 0;
+}
+.momdetails ul li{
+    padding: 1%;
+    margin: 0;
+}

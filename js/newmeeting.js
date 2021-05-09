@@ -96,6 +96,16 @@ function writeUserData(unixdate,link,venue,title,chosenTeam,pushmeetuserArr)
     type: meetingCore,
     users: pushmeetuserArr
   });
+  
+    firebase.database().ref('Home/Notification/').push({
+    id: newMeetingKey,
+    time: unixdate,
+    title: title,
+    location: venue, 
+    link: link,
+    type: meetingCore,
+    users: pushmeetuserArr
+    });
   alert("Meeting Posted");
   }
 
@@ -103,6 +113,16 @@ function writeUserData(unixdate,link,venue,title,chosenTeam,pushmeetuserArr)
   {
     var newMeetingKey = firebase.database().ref().child('Alerts/Team/').push().key;
     firebase.database().ref('Alerts/Team/').push({
+    id: newMeetingKey,
+    time: unixdate,
+    title: title,
+    location: venue, 
+    link: link,
+    type: chosenTeam,
+    users: pushmeetuserArr
+  });
+  
+  firebase.database().ref('Home/Notification/').push({
     id: newMeetingKey,
     time: unixdate,
     title: title,

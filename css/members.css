@@ -66,3 +66,37 @@
   display: block;
   content: "";
 }
+
+
+
+
+
+.member-card {
+  position: relative;
+  display: inline-block;
+}
+
+.member-card .tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  min-width: 125px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4%;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 40%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.member-card:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+}

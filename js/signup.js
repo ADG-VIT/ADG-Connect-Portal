@@ -29,24 +29,6 @@ togglePassword1.addEventListener("click", function (e) {
 });
 
 
-// // Your web app's Firebase configuration
-//   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-//   var firebaseConfig = {
-//     apiKey: "AIzaSyATTBiIr3ejGcjXlpLz_mIFV-D3uTv_hnU",
-//     authDomain: "internal-demo-f3701.firebaseapp.com",
-//     databaseURL: "https://internal-demo-f3701-default-rtdb.firebaseio.com",
-//     projectId: "internal-demo-f3701",
-//     storageBucket: "internal-demo-f3701.appspot.com",
-//     messagingSenderId: "981293967243",
-//     appId: "1:981293967243:web:3f3d4c137d12018cb3b18e",
-//     measurementId: "G-GMC40LHFBJ"
-//   };
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-//   firebase.analytics();
-
-
-
 //Authentication
   document.getElementById("signupForm").addEventListener('submit', regValidation)
 
@@ -114,10 +96,10 @@ togglePassword1.addEventListener("click", function (e) {
 function waitTime(){
     var delayInMilliseconds = 2000;
     setTimeout(function() {
-      userData();
+      sendMail();
     }, delayInMilliseconds);
 }
-/*
+
 function sendMail(){
   console.log("mail");
   var user = firebase.auth().currentUser;
@@ -131,7 +113,7 @@ function sendMail(){
   });
   userData();
 }
-*/
+
   function userData(){
     console.log("2");
     var user = firebase.auth().currentUser;
@@ -189,7 +171,7 @@ function writeUserData(userID, name, email, regNo, phone, fcm, bestFuture, isAdm
 function signOut(){
   console.log("Logged Out");
   firebase.auth().signOut();
-  alert('Signed up successfully');
+  alert('A Verification Email has been sent');
 }
 
 $("#signupForm").submit(function(e) {

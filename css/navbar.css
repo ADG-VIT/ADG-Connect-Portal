@@ -120,7 +120,7 @@ select {
 
 /* Logout button */
 .out {
-  margin-top: 25vh;
+  margin-top: 50%;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -142,7 +142,7 @@ button.logout {
 }
 
 .out1{
-  margin-top: 55vh;
+  margin-top: 150%;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -161,4 +161,92 @@ button.privacy{
   outline: none;
   cursor: pointer;
   padding: 2%;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f4f6ff;
+  border: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(230, 227, 227); 
+  border-radius : 10px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(210, 207, 207);
+}
+
+/* .left {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+} */
+
+/* .left a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+} */
+ 
+/* .left a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
+
+/* .left a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+} */
+
+@media screen and (max-width: 700px) {
+  body{
+    padding: 2% !important;
+  }
+  .left {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline;
+  }
+  .left a {float: left;}
+
+  .out1{
+    display: none;
+  }
+  img.logo{
+    width: 90%;
+    margin: 2%;
+  }
+  .right{
+    display: none;
+  }
+  .middle{
+    width: 100%;
+  }
+  li{
+    display: inline;
+    float: right;
+    padding-right: 10%;
+  }
+  
+  .logonav{
+    width: 50%;
+    margin: 0%;
+    float: left;
+  }
 }

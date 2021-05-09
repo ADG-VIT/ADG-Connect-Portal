@@ -81,7 +81,7 @@ const handleSubmit = async (event) => {
     const meeting = document.getElementById("choosemeeting");
     const id = meeting.value;
     meetingDetails = Meetings.Core[id] || Meetings.Team[id];
-    const title = meeting.options[meeting.selectedIndex].text;
+    const title = meeting.options[meeting.selectedIndex].text.split("on")[0];
     const header = document.getElementById("header").value;
     let points = [];
     const pointEls = document.getElementsByClassName("p");

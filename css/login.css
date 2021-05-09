@@ -40,4 +40,12 @@ label.pass {
 i {
   margin-left: -30px;
   cursor: pointer;
+  position: fixed;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  .loginLink{
+    display: none;
+  }
 }

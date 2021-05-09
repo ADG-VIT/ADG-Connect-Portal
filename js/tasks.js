@@ -242,6 +242,17 @@ function writeUserData(unixdate,link,venue,title,pushmeetuserArr){
   type: taskType,
   users: pushmeetuserArr
   });
+
+  firebase.database().ref('Home/Notification/').push({
+    id: newTaskKey,
+    time: unixdate,
+    title: title,
+    location: venue, 
+    link: link,
+    type: taskType,
+    users: pushmeetuserArr
+  });
+
   alert("Task Posted");
 }
 

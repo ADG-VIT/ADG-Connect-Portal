@@ -6,8 +6,8 @@ const getMeetings = async () => {
     meetings = await meetings.json();
     // console.log(meetings);
     return meetings;
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.error(error);
     alert("Failed to fetch meeting data");
   }
 };
@@ -32,25 +32,30 @@ const renderMeetings = async () => {
     .map(
       (m) =>
         `<div class="meeting" onclick="selectMeeting('${m.id}')">
+          <div style="display: flex; justify-content: space-between;">
           <p class="bold">
-            ${m.scope} Meeting
-            <a class="post" href="">Post Attendance</a>
+            ${m.title} Meeting
           </p>
+          </div>
           <p>${new Date(m.time * 1000).toLocaleDateString()}</p>
-        </div>`
+        </div>
+          `
     )
     .forEach((m) => (fetchedMeetings.innerHTML += m));
-  console.log(allMeetings);
 
   // fetchedMeetings.innerHTML += TeamsMeetings + CoreMeetings;
 };
 
 let id;
-
-const selectMeeting = async (meetingId) => {
-  id = meetingId;
+var Users;
+let meetingId;
+let unavailable;
+let acknowledged;
+const selectMeeting = async (mId) => {
+  meetingId = mId;
   try {
-    console.log(meetingId);
+    const ackMarkup = document.querySelector(".available");
+    const nonAckMarkup = document.querySelector(".unavailable");
     const dbRef = firebase.database().ref();
     let attendance = await dbRef
       .child("AlertAttendance")
@@ -58,44 +63,66 @@ const selectMeeting = async (meetingId) => {
       .get();
     let snapshot = await attendance.val();
 
-    let Users = await Promise.all(
+    Users = await Promise.all(
       Object.entries(snapshot).map(async ([key, value]) => {
         let user = await dbRef.child("Users").child(key).get();
         let snap = await user.val();
-        console.log(snap);
-        return {
-          name: snap.name,
-          regNo: snap.regNo,
-          reason: value,
-        };
+        return { ...snap };
       })
     );
-    console.log(Users);
 
-    const ackMarkup = document.querySelector(".available");
+    acknowledged = Users.filter((u) => snapshot[u.uid] === "available");
 
-    let acknowledged = Users.filter((u) => u.reason === "available");
-
-    console.log(ackMarkup);
     ackMarkup.innerHTML = `<h3>Acknowledged</h3>`;
-    acknowledged.forEach((user) => {
-      ackMarkup.innerHTML += `<div class="user">
-        <h4>${user.name}</h4>
-        <p>${user.regNo}</p>
-      </div>`;
-    });
-    let unavailable = Users.filter((u) => u.reason !== "available");
-    const nonAckMarkup = document.querySelector(".unavailable");
-    console.log(nonAckMarkup);
+    if (acknowledged) {
+      acknowledged.forEach((user, i) => {
+        ackMarkup.innerHTML += `<div class="user">
+          <h4>${user.name}</h4>
+          <p>${user.regNo}</p>
+          <div class="changestatus-btn" id="${i}"onclick="changeStatus(this.id, 0)">Change Status</div>
+        </div>`;
+      });
+    } else {
+      nonAckMarkup.innerHTML = `<p>No members</p>`;
+    }
+    unavailable = Users.filter((u) => snapshot[u.uid] !== "available");
     nonAckMarkup.innerHTML = `<h3>Unavailable</h3>`;
-    unavailable.forEach((user) => {
-      nonAckMarkup.innerHTML += `<div class="user">
-        <h4>${user.name}</h4>
-        <p>${user.regNo}</p>
-      </div>`;
-    });
+    if (unavailable) {
+      unavailable.forEach((user, i) => {
+        nonAckMarkup.innerHTML += `<div class="user">
+          <h4>${user.name}</h4>
+          <p>${user.regNo}</p>
+          <div class="changestatus-btn" id="${i}"onclick="changeStatus(this.id, 1)">Change Status</div>
+        </div>`;
+      });
+    } else {
+      nonAckMarkup.innerHTML = `<p>No members</p>`;
+    }
   } catch (error) {
     console.error(error);
   }
 };
 renderMeetings();
+
+// Mark
+async function changeStatus(id, status) {
+  let update = {};
+  status = parseInt(status);
+  if (status == 0) {
+    let currUser = acknowledged[id];
+    let currUserId = currUser["uid"];
+    update[currUserId] = "unavailable";
+  } else {
+    let currUser = unavailable[id];
+    let currUserId = currUser["uid"];
+    update[currUserId] = "available";
+  }
+  const dbRef = firebase.database().ref();
+  try {
+    await dbRef.child("AlertAttendance").child(meetingId).update(update);
+
+    selectMeeting(meetingId);
+  } catch (error) {
+    console.error(error);
+  }
+}
