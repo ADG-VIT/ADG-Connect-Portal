@@ -1,92 +1,92 @@
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    /*overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    backdrop-filter: blur(5px);
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /*overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  backdrop-filter: blur(5px);
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 35%;
-    border-radius: 20px;
-    height: 88%;
-    /*overflow-y: scroll;*/
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 35%;
+  border-radius: 20px;
+  height: 88%;
+  /*overflow-y: scroll;*/
 }
-  
+
 /* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: -6px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -6px;
 }
-  
+
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
-.add{
-    float: right;
-    background-color: #0091FB;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    height: auto;
-    width: 60px;
-    font-size: 14px;
-    padding: 7px;
-    cursor: pointer;
+.add {
+  float: right;
+  background-color: #0091fb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+  width: 60px;
+  font-size: 14px;
+  padding: 7px;
+  cursor: pointer;
 }
-#checkAll{
-    background-color: #0091FB;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    height: auto;
-    width: 90px;
-    font-size: 14px;
-    padding: 7px;
-    cursor: pointer;
-    outline: none;
+#checkAll {
+  background-color: #0091fb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+  width: 90px;
+  font-size: 14px;
+  padding: 7px;
+  cursor: pointer;
+  outline: none;
 }
-#checkAll:hover{
-    border: none;
+#checkAll:hover {
+  border: none;
 }
-#myBtn{
-    display: inline-block;
-    border: none;
-    cursor: pointer;
+#myBtn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
 }
-.fetchmemberslist{
-    overflow-x: auto;
-    overflow-y: scroll;
-    height: 75%;
-}
-
-input#searchBar{
-    width: 90%;
-    border: 1px solid #ddd;
+.fetchmemberslist {
+  overflow-x: auto;
+  overflow-y: scroll;
+  height: 75%;
 }
 
-td{
-    padding: 0%;
+input#searchBar {
+  width: 90%;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 0%;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }

@@ -253,12 +253,12 @@ function writeUserData(unixdate,link,venue,title,pushmeetuserArr){
     users: pushmeetuserArr
   });
 
-  alert("Task Posted");
+  alert("Task Posted"); 
+  window.location.reload(); 
 }
 
-/* 
-//Prevent form from refreshing on submit
-$("#newTaskForm").submit(function(e) {
-e.preventDefault();
+
+ //Prevent form from refreshing on submit
+ $("#newTaskForm").submit(function(e) {
+  e.preventDefault();
 });
-*/

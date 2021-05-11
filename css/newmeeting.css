@@ -1,15 +1,15 @@
 .right {
   padding-top: 160px;
 }
-.add-teams-text{
-text-align: left;
-padding-bottom: 5px;
-}
-.add-members{
+.add-teams-text {
+  text-align: left;
   padding-bottom: 5px;
 }
-#myBtn{
-  background-color: #0091FB;
+.add-members {
+  padding-bottom: 5px;
+}
+#myBtn {
+  background-color: #0091fb;
   color: white;
   border: none;
   border-radius: 20px;
@@ -18,7 +18,7 @@ padding-bottom: 5px;
   font-size: 20px;
   padding-bottom: 5px;
 }
-#myBtn:hover{
+#myBtn:hover {
   cursor: pointer;
   border: none;
 }
@@ -47,14 +47,16 @@ label.link {
   cursor: pointer;
 }
 
-.middle h3, .right h3{
+.middle h3,
+.right h3 {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
   margin-bottom: 3%;
   padding-bottom: 0%;
 }
 
-.middle h3:before, .right h3:before{
+.middle h3:before,
+.right h3:before {
   position: absolute;
   height: 1.5px;
   width: 55%;

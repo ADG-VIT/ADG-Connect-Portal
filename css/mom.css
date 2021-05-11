@@ -83,14 +83,14 @@ label.point {
   cursor: pointer;
 }
 
-.middle-mom h3{
+.middle-mom h3 {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
   margin-bottom: 2%;
   padding-bottom: 0%;
 }
 
-.middle-mom h3:before{
+.middle-mom h3:before {
   position: absolute;
   height: 1.5px;
   width: 55%;

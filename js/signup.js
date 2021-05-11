@@ -172,6 +172,7 @@ function signOut(){
   console.log("Logged Out");
   firebase.auth().signOut();
   alert('A Verification Email has been sent');
+  window.location.reload();
 }
 
 $("#signupForm").submit(function(e) {

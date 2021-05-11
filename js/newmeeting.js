@@ -132,6 +132,7 @@ function writeUserData(unixdate,link,venue,title,chosenTeam,pushmeetuserArr)
     users: pushmeetuserArr
   });
   alert("Meeting Posted");
+  window.location.reload();
   }
   
   else{
@@ -139,9 +140,9 @@ function writeUserData(unixdate,link,venue,title,chosenTeam,pushmeetuserArr)
   }
 }
 
-/*
+
 //Prevent form from refreshing on submit
 $("#newMeetingForm").submit(function(e) {
   e.preventDefault();
 });
-*/
+

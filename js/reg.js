@@ -1,4 +1,5 @@
 //Reg No array
+
 var regNoArr = [
     "19BCEguest",
     "19BCEanmol", 
@@ -7,7 +8,8 @@ var regNoArr = [
     "19BCE0630",
     "19BCEtest",
     "19BCE2227",
-    "19BCE0001"
+    "19BCE0001",
+    "19BCE0630"
 ];
 
 var emailArr = [
@@ -18,5 +20,8 @@ var emailArr = [
     "anmol.bansal2019@vitstudent.ac.in",
     "testuser@gmail.com",
     "panshul.jindal2019@vitstudent.ac.in",
-    "vidushig08@gmail.com"
+    "vidushig08@gmail.com",
+    "anmol.bansal2019@vitstudent.ac.in"
 ];
+
+

@@ -82,10 +82,10 @@ h3.add-teams-text {
   /* width: 100%; */
   margin-left: 3%;
   position: relative;
-  display: inline-block; 
+  display: inline-block;
 }
 
-h3.add-teams-text:before{
+h3.add-teams-text:before {
   position: absolute;
   height: 1.5px;
   width: 55%;
@@ -95,7 +95,6 @@ h3.add-teams-text:before{
   display: block;
   content: "";
 }
-
 
 .container {
   display: block;
@@ -156,8 +155,6 @@ h3.add-teams-text:before{
   transform: rotate(45deg);
 }
 
-
-
 /* Password */
 .fa,
 .far,
@@ -170,37 +167,35 @@ i {
 }
 
 @media screen and (max-width: 700px) {
-  
-  .signupLink{
+  .signupLink {
     display: none;
   }
-  .right{
+  .right {
     width: 100%;
     display: block !important;
   }
-  .middle{
+  .middle {
     height: auto !important;
   }
   body {
     overflow-y: scroll !important;
   }
-  .signup-btn{
+  .signup-btn {
     margin-left: 5%;
     align-items: center;
   }
-  .right-1{
+  .right-1 {
     width: 100%;
     padding-bottom: 0;
   }
-  .right-2{
+  .right-2 {
     width: 100%;
     padding-top: 0;
   }
-  li.loginLink{
+  li.loginLink {
     display: inline;
     float: right;
     padding-right: 5%;
     padding-left: 0%;
   }
 }
-

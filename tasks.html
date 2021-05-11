@@ -29,7 +29,6 @@
 
     <!-- title -->
     <title>ADG | Admin Portal</title>
-
   </head>
 
   <body>
@@ -45,32 +44,36 @@
         <ul class="navlinks">
           <li>
             <a href="newmeet.html">
-            <img class="icon" src="icons/meetings.svg" alt="" />
-            Meetings<br/></a>
+              <img class="icon" src="icons/meetings.svg" alt="" />
+              Meetings<br
+            /></a>
 
             <div class="meeting-radio">
               <ul>
                 <li class="inner">
                   <a href="newmeet.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                  />
-                  <label for="new" style="cursor: pointer;">New</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='newmeet.html'"
+                    />
+                    <label for="new" style="cursor: pointer">New</label><br />
+                  </a>
                 </li>
                 <li class="inner">
                   <a href="scheduledmeet.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                  />
-                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='scheduledmeet.html'"
+                    />
+                    <label for="new" style="cursor: pointer">Scheduled</label
+                    ><br />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -78,38 +81,42 @@
 
           <li>
             <a href="tasks.html">
-            <img class="icon" src="icons/task.svg" alt="" />
-             <b>Tasks</b>
+              <img class="icon" src="icons/task.svg" alt="" />
+              <b>Tasks</b>
             </a>
           </li>
 
           <li>
             <a href="newmom.html">
-            <img class="icon" src="icons/mom.svg" alt="" />
-             MOM</a>
-             <div class="meeting-radio">
+              <img class="icon" src="icons/mom.svg" alt="" />
+              MOM</a
+            >
+            <div class="meeting-radio">
               <ul>
                 <li class="inner">
                   <a href="newmom.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                  />
-                  <label for="new" style="cursor: pointer;">New</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='newmom.html'"
+                    />
+                    <label for="new" style="cursor: pointer">New</label><br />
+                  </a>
                 </li>
                 <li class="inner">
                   <a href="scheduledmom.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                  />
-                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='scheduledmom.html'"
+                    />
+                    <label for="new" style="cursor: pointer">Scheduled</label
+                    ><br />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -117,8 +124,8 @@
 
           <li>
             <a href="members.html">
-            <img class="icon" src="icons/members.svg" alt="" />
-             Members
+              <img class="icon" src="icons/members.svg" alt="" />
+              Members
             </a>
           </li>
         </ul>
@@ -126,7 +133,7 @@
       <!--NAVBAR Ends-->
 
       <div class="out">
-        <button class="logout">Log Out</button>
+        <button class="logout" onclick="logout()">Log Out</button>
       </div>
     </div>
 
@@ -150,38 +157,43 @@
           <label for="link" class="link">Link:</label>
           <input type="url" id="link" name="link" /><br /><br />
         </div>
-        <button class="add-task-btn" onclick="TDate()">
-          Post Task
-        </button>
+        <button class="add-task-btn" onclick="TDate()">Post Task</button>
       </div>
 
       <div class="right">
-        <h3 class="add-members">Add Members
+        <h3 class="add-members">
+          Add Members
           <button id="myBtn" type="button" onclick="openModal()">+</button>
         </h3>
-        <br>
+        <br />
 
-        <div class="selectedMembers" id="selectedMembers">
-        </div>
+        <div class="selectedMembers" id="selectedMembers"></div>
 
         <!-- The Modal -->
-        <div id="myModal" class="modal" style="display: none;">
+        <div id="myModal" class="modal" style="display: none">
           <!-- Modal content -->
           <div class="modal-content" id="modal-container">
             <span class="close">&times;</span>
-            
-            <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search for names.." autofocus title="Type in a name"><br><br>
-            <div class="fetchmemberslist" id="fetchmemberslist">
-            </div>
-            <br>
-            <input id="checkAll" type="button" value="Check All">
-            <button class="add" id="add" type="button" onclick="test()">Add</button>
+
+            <input
+              type="text"
+              id="searchBar"
+              onkeyup="searchTable()"
+              placeholder="Search for names.."
+              autofocus
+              title="Type in a name"
+            /><br /><br />
+            <div class="fetchmemberslist" id="fetchmemberslist"></div>
+            <br />
+            <input id="checkAll" type="button" value="Check All" />
+            <button class="add" id="add" type="button" onclick="test()">
+              Add
+            </button>
           </div>
         </div>
-
       </div>
     </form>
-    
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
@@ -189,7 +201,7 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-    
+
     <script src="js/firebase.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/tasks.js"></script>

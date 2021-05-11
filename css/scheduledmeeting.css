@@ -45,7 +45,7 @@ h3 {
 .meeting:hover {
   background-color: #ecf5fc;
 }
-.activeMeeting{
+.active {
   background-color: cornflowerblue;
 }
 .meeting p {
@@ -64,7 +64,7 @@ a.post {
 .user h4 {
   font-weight: bold;
 }
-.changestatus-btn{
+.changestatus-btn {
   border: black 0.5px solid;
   border-radius: 5px;
   width: fit-content;
@@ -72,4 +72,11 @@ a.post {
   margin: 1%;
   margin-bottom: 5%;
   cursor: pointer;
+}
+
+p.title {
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 5%;
+  margin-bottom: 1em;
 }

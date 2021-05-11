@@ -106,6 +106,7 @@ const handleSubmit = async (event) => {
     );
     console.log(await newMoM.json());
     alert("MoM posted successfully");
+    window.location.reload();
   } catch (error) {
     console.log(error);
     alert("Failed to post MoM");

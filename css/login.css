@@ -24,7 +24,7 @@ h4 {
   cursor: pointer;
 }
 label.user {
-  padding-right: 6%;
+  padding-right: 5%;
   font-size: 16px;
 }
 label.pass {
@@ -45,7 +45,7 @@ i {
 }
 
 @media screen and (max-width: 700px) {
-  .loginLink{
+  .loginLink {
     display: none;
   }
 }

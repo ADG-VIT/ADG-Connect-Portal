@@ -37,34 +37,36 @@
         <ul class="navlinks">
           <li>
             <a href="newmeet.html">
-            <img class="icon" src="icons/meetings.svg" alt="" />
-            Meetings<br/></a>
+              <img class="icon" src="icons/meetings.svg" alt="" />
+              Meetings<br
+            /></a>
 
             <div class="meeting-radio">
               <ul>
                 <li class="inner">
                   <a href="newmeet.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                    onclick="window.location.href='newmeet.html'"
-                  />
-                  <label for="new" style="cursor: pointer;">New</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='newmeet.html'"
+                    />
+                    <label for="new" style="cursor: pointer">New</label><br />
+                  </a>
                 </li>
                 <li class="inner">
                   <a href="scheduledmeet.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                    onclick="window.location.href='scheduledmeet.html'"
-                  />
-                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='scheduledmeet.html'"
+                    />
+                    <label for="new" style="cursor: pointer">Scheduled</label
+                    ><br />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -72,41 +74,44 @@
 
           <li>
             <a href="tasks.html">
-            <img class="icon" src="icons/task.svg" alt="" />
-             Tasks
+              <img class="icon" src="icons/task.svg" alt="" />
+              Tasks
             </a>
           </li>
 
           <li>
             <a href="newmom.html">
-            <img class="icon" src="icons/mom.svg" alt="" />
-             <b>MOM</b></a>
-             <div class="meeting-radio">
+              <img class="icon" src="icons/mom.svg" alt="" />
+              <b>MOM</b></a
+            >
+            <div class="meeting-radio">
               <ul>
                 <li class="inner">
                   <a href="newmom.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                    onclick="window.location.href='newmom.html'"
-                    checked
-                  />
-                  <label for="new" style="cursor: pointer;"><b>New</b></label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='newmom.html'"
+                      checked
+                    />
+                    <label for="new" style="cursor: pointer"><b>New</b></label
+                    ><br />
+                  </a>
                 </li>
                 <li class="inner">
                   <a href="scheduledmom.html">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="new"
-                    style="cursor: pointer;"
-                    onclick="window.location.href='scheduledmom.html'"
-                  />
-                  <label for="new" style="cursor: pointer;">Scheduled</label><br/>
-                </a>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="new"
+                      style="cursor: pointer"
+                      onclick="window.location.href='scheduledmom.html'"
+                    />
+                    <label for="new" style="cursor: pointer">Scheduled</label
+                    ><br />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -114,15 +119,15 @@
 
           <li>
             <a href="members.html">
-            <img class="icon" src="icons/members.svg" alt="" />
-             Members
+              <img class="icon" src="icons/members.svg" alt="" />
+              Members
             </a>
           </li>
         </ul>
       </nav>
       <!--NAVBAR Ends-->
       <div class="out">
-        <button class="logout">Log Out</button>
+        <button class="logout" onclick="logout()">Log Out</button>
       </div>
     </div>
 
@@ -135,7 +140,7 @@
       <form action="">
         <div class="newmomform">
           <label for="name" class="choosemeeting">Choose Meeting: </label>
-          <select id="choosemeeting" name="meeting" style="padding: 0%;">
+          <select id="choosemeeting" name="meeting" style="padding: 0%">
             <option value="blank"></option></select
           ><br /><br />
 
@@ -176,5 +181,6 @@
       </form>
     </div>
     <script src="js/mom.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>

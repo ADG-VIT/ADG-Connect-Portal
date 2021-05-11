@@ -1,6 +1,6 @@
 .members-list {
   height: 100vh;
-  background-color: #F4FBFF;;
+  background-color: #f4fbff;
   padding-left: 5%;
   width: 82%;
   float: right;
@@ -56,7 +56,7 @@
   display: inline-block;
 }
 
-.team h2:before{
+.team h2:before {
   position: absolute;
   height: 1.5px;
   width: 55%;
@@ -66,10 +66,6 @@
   display: block;
   content: "";
 }
-
-
-
-
 
 .member-card {
   position: relative;
@@ -90,7 +86,7 @@
   bottom: 100%;
   left: 40%;
   margin-left: -60px;
-  
+
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
   transition: opacity 1s;

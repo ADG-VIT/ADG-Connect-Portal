@@ -29,11 +29,11 @@ h4 {
 .middle {
   float: left;
   padding-left: 5%;
-  background-color: #F4FBFF;
+  background-color: #f4fbff;
 }
 .right {
   float: left;
-  background-color: #F4FBFF;
+  background-color: #f4fbff;
 }
 .left {
   float: left;
@@ -141,7 +141,7 @@ button.logout {
   cursor: pointer;
 }
 
-.out1{
+.out1 {
   margin-top: 150%;
   text-align: center;
   align-items: center;
@@ -149,7 +149,7 @@ button.logout {
   vertical-align: baseline;
 }
 
-button.privacy{
+button.privacy {
   background-color: #ffffff;
   border: 0.5px solid #000000;
   box-sizing: border-box;
@@ -163,7 +163,6 @@ button.privacy{
   padding: 2%;
 }
 
-
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
@@ -174,11 +173,11 @@ button.privacy{
   background: #f4f6ff;
   border: none;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(230, 227, 227); 
-  border-radius : 10px
+  background: rgb(230, 227, 227);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
@@ -202,7 +201,7 @@ button.privacy{
   padding: 16px;
   text-decoration: none;
 } */
- 
+
 /* .left a.active {
   background-color: #04AA6D;
   color: white;
@@ -214,7 +213,7 @@ button.privacy{
 } */
 
 @media screen and (max-width: 700px) {
-  body{
+  body {
     padding: 2% !important;
   }
   .left {
@@ -223,28 +222,30 @@ button.privacy{
     position: relative;
     display: inline;
   }
-  .left a {float: left;}
+  .left a {
+    float: left;
+  }
 
-  .out1{
+  .out1 {
     display: none;
   }
-  img.logo{
+  img.logo {
     width: 90%;
     margin: 2%;
   }
-  .right{
+  .right {
     display: none;
   }
-  .middle{
+  .middle {
     width: 100%;
   }
-  li{
+  li {
     display: inline;
     float: right;
     padding-right: 10%;
   }
-  
-  .logonav{
+
+  .logonav {
     width: 50%;
     margin: 0%;
     float: left;

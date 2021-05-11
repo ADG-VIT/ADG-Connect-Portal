@@ -2,6 +2,11 @@
 
 ### The Admin Portal for ADG Internals App
 
+## Technologies used 🛠:
+1. Firebase
+2. Javascript
+3. HTML5
+4. CSS3
 ## Contributors 👨‍💻:
 
 [Vidushi Gupta](https://github.com/vidushig08)
