@@ -105,13 +105,92 @@ const handleSubmit = async (event) => {
       }
     );
     console.log(await newMoM.json());
-    alert("MoM posted successfully");
-    window.location.reload();
+  var pushmeetuserArr = meetingDetails.users;
+  console.log(pushmeetuserArr);
+  var fcmArr = [];
+  var notif;
+
+  function getFCM(){
+    console.log("Getting FCM");
+    return new Promise(function(resolve, reject){
+      for (var i =0; i < pushmeetuserArr.length; i++){
+        console.log(i);
+        console.log(pushmeetuserArr[i]);
+        var ref = firebase.database().ref("Users");
+        ref.orderByChild("uid").equalTo(pushmeetuserArr[i]).on("child_added", function(snapshot) {
+          console.log(snapshot.key);
+          var userfcm = snapshot.val().fcm;
+          console.log(userfcm);
+          fcmArr.push(userfcm);
+          console.log(fcmArr);
+          resolve(fcmArr);
+        });
+      }
+    })
+  }
+
+  function getNotifData(){
+    return new Promise(function(resolve, reject){
+      var titleNotif =  title;
+      console.log(notif);
+      resolve(notif);
+    })
+  }
+
+  function sendNotification(){
+    console.log("sending notification");
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "key=AAAAr7nfbFc:APA91bEcfhCAcXHNpLBCRwWu5MlJc9BrSZebZ_UmhlT-onKNRI2GuMGGCnN9wo2DhqZ7aj-52lxg-X1tIfvKu8hDS7gb9A8LUc7Wf8YDewqvQ-OBNvk_PWlTMvf3cFeWilYWpTD58jsr");
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+    "registration_ids": fcmArr,
+    "priority": "high",
+    "content_available": true,
+    "mutable_content": true,
+    "notification": {
+        "title": "New MoM Posted",
+        "body": notif,
+        "sound": "default"
+    },
+    "sound": "default"
+    });
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+    fetch("https://fcm.googleapis.com/fcm/send", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .then(alert("MoM Posted"))
+    .then(window.location.reload())
+    .catch(error => alert('error', error));
+  }
+
+  async function sendNotif(){
+    console.log('Send Notif');
+    await getFCM();
+    console.log("FCM Array Formed");
+    await getNotifData();
+    console.log("Notif Data Fetched");
+    sendNotification();
+    console.log("notification sent");
+  }
+
+    sendNotif();
+    // alert("MoM posted successfully");
+    // window.location.reload();
   } catch (error) {
     console.log(error);
     alert("Failed to post MoM");
   }
+
 };
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

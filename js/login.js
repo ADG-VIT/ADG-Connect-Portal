@@ -12,6 +12,8 @@ togglePassword.addEventListener("click", function (e) {
   this.classList.toggle("fa-eye-slash");
 });
 
+var adminId;
+
 //Authentication - Firebase - Login 
 const auth = firebase.auth();
 
@@ -35,12 +37,13 @@ function login(){
                 alert("Signed in Successfully");
                 console.log("redirect");
                 window.location.assign("newmeet.html");
+                //adminId = user.uid;
                 //...
               }
               else if (admin == false){
                 console.log("3");
                 firebase.auth().signOut();
-                alert("You are not an Admin !");
+                window.location.assign("jrlogin.html");
               }
             });
           })
@@ -62,6 +65,7 @@ auth.onAuthStateChanged(function(user){
         if (admin == true){
           console.log("redirect");
           window.location.assign("newmeet.html");
+          var adminId = user.uid;
           //...
         }
     });
@@ -72,12 +76,47 @@ auth.onAuthStateChanged(function(user){
     }
 });
 
-
+/*
+firebase.auth().onAuthStateChanged(function(user){
+  if(user){
+      //user is signed in
+  }else{
+      window.location.assign("index.html");
+  }
+});
+*/
 function logout(){
-  firebase.auth().signOut();
-  console.log("signed out");
-  window.location.replace("index.html");
-}
+    //window.location.replace("index.html");
+    firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+        alert("Signed Out");
+        window.location.assign("index.html");
+
+      }).catch((error) => {
+        // An error happened.
+        alert(error);
+      });
+  }
+
+/*
+  // var admin = firebase.auth().currentUser;
+  // if (admin != null){
+  //   adminId = admin.uid;
+  //   console.log("Hi");
+  // }
+  // console.log(adminId);
+  var name;
+  var ref = firebase.database().ref("Users/" + adminId);
+      ref.once("value")
+      .then(function(snapshot) {
+      name = snapshot.child("name").val();
+      console.log("User Name");
+      });
+  console.log(name);
+  //var name = "Anmol Bansal";
+  var initials = name.match(/(\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase();
+  console.log(initials);
+*/
 
 $("#signinForm").submit(function(e) {
   e.preventDefault();

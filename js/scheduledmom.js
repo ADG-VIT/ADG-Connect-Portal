@@ -25,7 +25,7 @@ const renderMOMS = async () => {
         `<div class="MOM" onclick="selectMOM('${k}')">
           <div style="display: flex; justify-content: space-between;">
           <p class="bold">
-            ${m.header}
+            ${m.title}
           </p>
           </div>
           <p>${new Date(m.time * 1000).toLocaleDateString()}</p>
@@ -55,10 +55,10 @@ const selectMOM = async (mId) => {
     });
     right.innerHTML += `
     <div class="momdetails">
-      <h4 class="momheading">${MOM.header}</h4>
+      <h4 class="momheading">${MOM.title}</h4>
       <p>${new Date(MOM.time * 1000).toLocaleString()}</p>
       <br />
-      <p>${MOM.title}</p>
+      <p>${MOM.header}</p>
       <br />
       <p class="bold">Points Discussed</p>
       <ul>

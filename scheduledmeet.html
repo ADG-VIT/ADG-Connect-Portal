@@ -25,6 +25,7 @@
   </head>
 
   <body>
+    <div id="loader" class="center"></div>
     <div class="left">
       <!--NAVBAR Starts-->
       <nav class="nav-active" id="navbar">
@@ -127,6 +128,11 @@
       </nav>
       <!--NAVBAR Ends-->
       <div class="out">
+        <div class="initial" id="initial">MN</div>
+        <div class="admin-name">
+          <span id="name-tag">Member Name</span>
+          <span class="name-desc" id="name-desc">Designation</span>
+        </div>
         <button class="logout" onclick="logout()">Log Out</button>
       </div>
     </div>
@@ -155,8 +161,8 @@
         </div> -->
       </div>
     </div>
-
-    <div class="right">
+    <!-- <div class="blank"></div> -->
+    <div class="right" id="right">
       <div class="meeting-title">
         <!-- <h3 style="position: fixed;">Acknowledged</h3> -->
       </div>

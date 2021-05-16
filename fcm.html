@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="send()">Click</button>
+    <input type="datetime-local" id="date" name="date" required/><br /><br />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    
+    <script src="js/firebase.js"></script>
+    <script>
+/*
+        function send(){
+            //console.log("1");
+            // var panshul = "j8wRGcEgJrMCUAchjfTrD466iFp2";
+            // var fcmArr = [];
+            // var userfcm;
+            // var pushmeetuserArr = ["j8wRGcEgJrMCUAchjfTrD466iFp2", "8YUM5A4T5NaATiU2OKmrx4kQ4BS2", "NE0SB62uEubuo5BGaQy0X6Q4xkD2"];
+            // //console.log("2");
+            // for (var i =0; i < pushmeetuserArr.length; i++){
+            //     //console.log(i);
+            //     //console.log(pushmeetuserArr[i]);
+            //     var ref = firebase.database().ref("Users/" + pushmeetuserArr[i]);
+            //     ref.once("value")
+            //     .then(function(snapshot) {
+            //     userfcm = snapshot.child("fcm").val();
+            //     fcmArr.push(userfcm);
+            // });
+            // }
+            // console.log(fcmArr);
+            
+            // var titleNotif = "HiHihi"
+            // let date = document.getElementById("date").value;
+            // var time = new Date(date);
+            // var meetTime = time.toLocaleString();
+            // var notif = titleNotif + " on " + meetTime;
+            // document.write(notif);
+
+            //var panshul = "j8wRGcEgJrMCUAchjfTrD466iFp2";
+            var fcmArr = ["dYVisSZIRh-53tksQYbXUN:APA91bEEOXyC8Ts3VDhdygZxjcQ1VPSn8Fdjn70wr83HWNiZol28zfD5o2Q8maJHIiBKCDvRvxleTUJLIKpCQz_6AcOp-MkKS4u43z1oCtmbPZJBWlxf3hJ5ynFgQvq0Tn50b37EZoW6"];
+            var notif = "Hi";
+
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "key=AAAAr7nfbFc:APA91bEcfhCAcXHNpLBCRwWu5MlJc9BrSZebZ_UmhlT-onKNRI2GuMGGCnN9wo2DhqZ7aj-52lxg-X1tIfvKu8hDS7gb9A8LUc7Wf8YDewqvQ-OBNvk_PWlTMvf3cFeWilYWpTD58jsr");
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({
+            "registration_ids": fcmArr,
+            "priority": "high",
+            "content_available": true,
+            "mutable_content": true,
+            "notification": {
+                "title": "New Meeting Scheduled",
+                "body": notif,
+                "sound": "default"
+            },
+            "sound": "default"
+            });
+
+            console.log(raw);
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://fcm.googleapis.com/fcm/send", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => alert('error', error));
+        }
+
+        */
+       pushmeetuserArr = ["j8wRGcEgJrMCUAchjfTrD466iFp2"];
+        var fcmArr = [];
+        var ref = firebase.database().ref("Users");
+        ref.orderByChild("uid").equalTo(pushmeetuserArr[0]).on("child_added", function(snapshot) {
+        console.log(snapshot.val().name);
+        console.log(snapshot.val().fcm);
+        var userfcm = snapshot.val().fcm;
+        console.log(userfcm);
+        fcmArr.push(userfcm);
+        console.log(fcmArr);
+        })
+    </script>
+</body>
+</html>
+
+"cSGoY1qaQImcbL3j3QHerE:APA91bGz_3VAx6rEJM6kXn4-R5IuRPjrti17DkS2VngXDvNneNcrSFp-XvbHzWQDeRbza3fPNKdRHyNYJ_c0PImGM-jt9THeSTK_V4BLEnduVSZhSGzRyq9uWhcFr-P1zo77QK58-t57"

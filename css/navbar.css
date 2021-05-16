@@ -9,6 +9,39 @@ body {
   height: 100vh;
   overflow-y: hidden;
 }
+
+#loader, #loader-div {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.center-div{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 h2 {
   font-size: 40px;
   margin-top: 26px;
@@ -120,11 +153,17 @@ select {
 
 /* Logout button */
 .out {
-  margin-top: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-end; */
   align-items: center;
-  align-content: center;
-  vertical-align: baseline;
+  justify-content: center;
+  padding: 1%;
+  align-content: space-evenly;
 }
 
 button.logout {
@@ -132,13 +171,42 @@ button.logout {
   border: 0.5px solid #ff0000;
   box-sizing: border-box;
   border-radius: 5px;
-  width: 120px;
-  height: 30px;
+  width: 65px;
+  height: 25px;
   text-align: center;
   color: #ff0000;
   font-weight: 800;
   outline: none;
   cursor: pointer;
+  margin-left: 1em;
+}
+
+.initial{
+  height: 48px;
+  width: 48px;
+  background: #0091FB;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-name{
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.name-desc{
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .out1 {
@@ -251,3 +319,4 @@ button.privacy {
     float: left;
   }
 }
+

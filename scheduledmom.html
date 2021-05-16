@@ -24,6 +24,7 @@
   </head>
 
   <body>
+    <div id="loader" class="center"></div>
     <div class="left">
       <!--NAVBAR Starts-->
       <nav class="nav-active" id="navbar">
@@ -126,6 +127,13 @@
       </nav>
       <!--NAVBAR Ends-->
       <div class="out">
+        <div class="initial" id="initial">
+          MN
+        </div>
+        <div class="admin-name">
+          <span id="name-tag">Member Name</span>
+          <span class="name-desc" id="name-desc">Designation</span>
+        </div>
         <button class="logout" onclick="logout()">Log Out</button>
       </div>
     </div>
@@ -135,8 +143,9 @@
       <h4>Already Posted MOM</h4>
       <div class="fetchedMOMS"></div>
     </div>
-
-    <div class="right">
+    <div class="blank"></div>
+    <div class="right" id="mom-right">
+      
       <!-- <div class="momdetails">
         <h4 class="momheading">Core Meeting MOM</h4>
         <p>08 Mar 2021, 09:00PM</p><br>

@@ -5,6 +5,10 @@
   overflow-y: scroll;
   padding-bottom: 1.5em;
 }
+#mom-right {
+  overflow-y: scroll;
+  padding-top: 0%;
+}
 .MOM {
   padding: 15px;
   cursor: pointer;
@@ -15,6 +19,7 @@
 .momdetails {
   margin-left: 8%;
   margin-right: 8%;
+  margin-bottom: 15%;
 }
 .momheading {
   font-size: 20px;

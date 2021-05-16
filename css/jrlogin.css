@@ -1,0 +1,31 @@
+body {
+  background: url(../jr.png) no-repeat center center fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+img {
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+}
+div {
+  align-items: center;
+}
+h3 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: lighter;
+}
+button {
+  width: 300px;
+  height: 48px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}

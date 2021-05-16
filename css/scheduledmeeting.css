@@ -15,29 +15,38 @@ h3 {
   padding-bottom: 1.5em;
 }
 .right {
-  overflow-y: scroll;
-}
-
-.right {
   padding-top: 10%;
   text-align: left;
   width: 50%;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 5%;
 }
 .available {
   float: left;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   padding-left: 5%;
+  padding-bottom: 5%;
+  overflow-y: scroll;
+  overflow: auto;
 }
 .unavailable {
   float: right;
   width: 50%;
+  height: 100%;
   align-items: left;
   text-align: left;
-  height: 100vh;
   padding-left: 5%;
+  padding-bottom: 5%;
+  overflow-y: scroll;
+  overflow: auto;
 }
+
+.reason {
+  cursor: pointer;
+  font-style: italic;
+}
+
 .meeting {
   padding: 15px;
   cursor: pointer;
@@ -74,9 +83,17 @@ a.post {
   cursor: pointer;
 }
 
-p.title {
+.meeting-title {
   font-size: 22px;
   font-weight: bold;
   padding-left: 5%;
   margin-bottom: 1em;
+}
+
+.blank {
+  height: 20%;
+  width: 50%;
+  background-color: #f4fbff;
+  /* position: fixed; */
+  float: right;
 }

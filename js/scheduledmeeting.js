@@ -36,7 +36,7 @@ const renderMeetings = async () => {
         `<div class="meeting" onclick="selectMeeting('${m.id}')">
           <div style="display: flex; justify-content: space-between;">
           <p class="bold">
-            ${m.title}
+            ${m?.title}
           </p>
           </div>
           <p>${new Date(m.time * 1000).toLocaleDateString()}</p>
@@ -74,8 +74,10 @@ const selectMeeting = async (mId) => {
       })
     );
 
-    let title = Meetings.Core[mId].title ?? Meetings.Team[mId].title;
-    document.querySelector(".meeting-title").innerHTML = `<p class="title">${title}</p>`;
+    console.log(Users);
+
+    let title = Meetings.Core[mId]?.title ?? Meetings.Team[mId]?.title;
+    document.querySelector(".meeting-title").innerHTML = `${title}`;
     acknowledged = Users.filter((u) => snapshot[u.uid] === "available");
 
     ackMarkup.innerHTML = `<h3>Acknowledged</h3>`;
@@ -97,6 +99,12 @@ const selectMeeting = async (mId) => {
         nonAckMarkup.innerHTML += `<div class="user">
           <h4>${user.name}</h4>
           <p>${user.regNo}</p>
+          <div>
+            <details>
+              <summary class="reason">Reason &#9660;</summary>
+              <p>${user?.meetings?.meetingId || "Unavailable"}</p>
+            </details>
+          </div>
           <div class="changestatus-btn" id="${i}"onclick="changeStatus(this.id, 1)">Change Status</div>
         </div>`;
       });
@@ -131,4 +139,4 @@ async function changeStatus(id, status) {
   } catch (error) {
     console.error(error);
   }
-}
+}  
