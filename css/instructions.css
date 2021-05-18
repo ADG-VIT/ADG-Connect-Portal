@@ -27,7 +27,15 @@ body {
 }
 p {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+p#title {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 5%;
+  letter-spacing: 1px;
+  padding-top: 2%;
 }
 .instructions {
   width: 300px;
@@ -49,6 +57,44 @@ p {
   color: black;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+input {
+  width: 400px;
+  height: 32px;
+  font-size: 14px;
+  padding: 1%;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  outline: none;
+}
+
+.signup-btn {
+  width: 300px;
+  height: 48px;
+  background-color: #0091fb;
+  border-radius: 10px;
+  border: white;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.signup-btn:hover {
+  cursor: pointer;
+}
+
+/* Password */
+.fa,
+.far,
+.fas {
+  display: inline-flex;
+}
+i {
+  position: fixed;
+  align-items: center;
+  margin-left: -25px;
+  margin-top: 8px;
   cursor: pointer;
 }
 

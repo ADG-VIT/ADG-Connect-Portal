@@ -10,7 +10,8 @@ body {
   overflow-y: hidden;
 }
 
-#loader, #loader-div {
+#loader{
+  /* display: none; */
   border: 12px solid #f3f3f3;
   border-radius: 50%;
   border-top: 12px solid #444444;
@@ -25,14 +26,10 @@ body {
   }
 }
 
-.center-div{
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.passwordAlert{
+  margin-left: 135px;
 }
+
 .center {
   position: absolute;
   top: 0;
@@ -153,6 +150,7 @@ select {
 
 /* Logout button */
 .out {
+  width: 18%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -178,16 +176,16 @@ button.logout {
   font-weight: 800;
   outline: none;
   cursor: pointer;
-  margin-left: 1em;
+  margin-left: 3px;
 }
 
 .initial{
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   background: #0091FB;
   border-radius: 50%;
   color: #ffffff;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -202,6 +200,7 @@ button.logout {
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+  width: 120px;
 }
 
 .name-desc{

@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <form action="" role="form" id="signupForm">
+    <form action="POST" role="form" id="signupForm">
       <div class="middle">
         <h2>User Sign Up</h2>
         <h4>Sign Up All Users</h4>
@@ -89,7 +89,8 @@
           id="signupPassConfirm"
           name="password2"
           required
-        /><br /><br />
+        /><div class="passwordAlert" id="divCheckPasswordMatch">
+        </div><br /><br />
 
         <!-- <label class="type" for="type">Type:</label>
               <select name="type" id="signupType">

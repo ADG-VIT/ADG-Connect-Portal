@@ -1,14 +1,16 @@
 //Reg No array
 
 var regNoArr = [
-    "19BCE0171",
+    "19BCE0171", //Internals Team
     "19BCE2227",
     "19BCE0922",
     "19BCE0630",
     "19BEC0596",
     "19BCE0496",
     "19BEC0629",
-    "18BCE0265",
+    "19MIC0106",
+    "19BDS0063", //Internals Team
+    "18BCE0265", //Board
     "18BCE2018",
     "18BCE0796",
     "18BCE0702",
@@ -19,44 +21,124 @@ var regNoArr = [
     "18BCE0761",
     "18BIT0093",
     "18BCE2146",
-    "18BCE2026"
+    "18BCE2026", //Board
+    "19BBS0090", //New 2nd Years
+    "19BCB0119", 
+    "19BCE0162", 
+    "19BCE0509", 
+    "19BCE0547", 
+    "19BCE0860", 
+    "19BCE0890", 
+    "19BCE0914", 
+    "19BCE2012", 
+    "19BCE2201", 
+    "19BCE2427", 
+    "19BCE2432", //New 2nd Years
+    "20BBS0018", //1st Years
+    "20BBS0070", 
+    "20BBS0162", 
+    "20BBS0208", 
+    "20BCB0055", 
+    "20BCB0116", 
+    "20BCE0019", 
+    "20BCE0051", 
+    "20BCE0198", 
+    "20BCE0273", 
+    "20BCE0501", 
+    "20BCE0556", 
+    "20BCE0599", 
+    "20BCE0607", 
+    "20BCE0719", 
+    "20BCE0763", 
+    "20BCE0788", 
+    "20BCE0819", 
+    "20BCE0832", 
+    "20BCE0890", 
+    "20BCE0891", 
+    "20BCE0895", 
+    "20BCE0904", 
+    "20BCE0908", 
+    "20BCE0992", 
+    "20BCE0997", 
+    "20BCE2066", 
+    "20BCE2080", 
+    "20BCE2104", 
+    "20BCE2110", 
+    "20BCE2137", 
+    "20BCE2165", 
+    "20BCE2212", 
+    "20BCE2266", 
+    "20BCE2296", 
+    "20BCE2308", 
+    "20BCE2318", 
+    "20BCE2430", 
+    "20BCE2467", 
+    "20BCE2582", 
+    "20BCE2664", 
+    "20BCE2673", 
+    "20BCE2738", 
+    "20BCE2845", 
+    "20BCI0265", 
+    "20BCI0271", 
+    "20BCT0087", 
+    "20BCT0092", 
+    "20BCT0111", 
+    "20BCT0144", 
+    "20BCT0157", 
+    "20BCT0201", 
+    "20BCT0267", 
+    "20BDS0204", 
+    "20BDS0265", 
+    "20BDS0316", 
+    "20BDS0386", 
+    "20BEC0221", 
+    "20BEC0360", 
+    "20BEC0406", 
+    "20BEC0574", 
+    "20BEC0599", 
+    "20BEE0157", 
+    "20BIT0051", 
+    "20BIT0130", 
+    "20BIT0146", 
+    "20BIT0153", 
+    "20BIT0167", 
+    "20BIT0183", 
+    "20BIT0262", 
+    "20BIT0270", 
+    "20BIT0402", 
+    "20BKT0009", 
+    "20BKT0048", 
+    "20BKT0057", 
+    "20BKT0072", 
+    "20BKT0076", 
+    "20BKT0091", 
+    "20BKT0095", 
+    "20BKT0126", 
+    "20BKT0145", 
+    "20BMA0004", 
+    "20MID0035", 
+    "20MID0039", 
+    "20MIS0028", 
+    "20MIS0125", 
+    "20MIS0187", 
+    "20MIS0190", 
+    "20MIS0277", 
+    "20MIS0410", //1st Years
+    "19BCE0600"  //Test Data
 ];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var emailArr = [
-    "dev.sharma2019@vitstudent.ac.in",
+    "dev.sharma2019@vitstudent.ac.in",              //Internals Team
     "panshul.jindal2019@vitstudent.ac.in",
     "vidushi.gupta2019@vitstudent.ac.in",
     "anmol.bansal2019@vitstudent.ac.in",
     "riddhi.gupta2019@vitstudent.ac.in",
     "harshvivek.londhekar2019@vitstudent.ac.in",
     "utkarsh.dixit2019@vitstudent.ac.in",
-    "ishaan.ohri2018@vitstudent.ac.in",
+    "arupamkumar.saha2019@vitstudent.ac.in",        
+    "aaryan.kothari2019@vitstudent.ac.in",         //Internals Team
+    "ishaan.ohri2018@vitstudent.ac.in",            //Board
     "ritik.suryawanshi2018@vitstudent.ac.in",
     "keshav.periwal2018@vitstudent.ac.in",
     "akshit.sadana2018@vitstudent.ac.in",
@@ -67,7 +149,110 @@ var emailArr = [
     "divya.jyoti2018@vitstudent.ac.in",
     "ishika.dubey2018@vitstudent.ac.in",
     "piyush.bajaj2018@vitstudent.ac.in",
-    "ankit.yadav2018@vitstudent.ac.in"
+    "ankit.yadav2018@vitstudent.ac.in",             //Board
+    "margi.2019@vitstudent.ac.in",                  //New 2nd Years
+    "pallavi.mishra2019@vitstudent.ac.in", 
+    "apurva.sharma2019@vitstudent.ac.in", 
+    "darashan.chaurasia2019@vitstudent.ac.in", 
+    "ritwik.kundu2019@vitstudent.ac.in", 
+    "tanmay.sinha2019@vitstudent.ac.in", 
+    "jonathan.atrey2019@vitstudent.ac.in", 
+    "khushee.jain2019@vitstudent.ac.in", 
+    "chinthamvishal.2019@vitstudent.ac.in", 
+    "suyash.johri2019@vitstudent.ac.in", 
+    "aditi.adgaonkar2019@vitstudent.ac.in", 
+    "akhil.bhimarasetty2019@vitstudent.ac.in",      //New 2nd Years
+    "susmit.singh2020@vitstudent.ac.in",            //1st Years
+    "siddharth.singh2020@vitstudent.ac.in", 
+    "vaibhav.shah2020@vitstudent.ac.in", 
+    "nikhil.dangi2020@vitstudent.ac.in", 
+    "edwinjoshua.samraj2020@vitstudent.ac.in", 
+    "ansh.goel2020a@vitstudent.ac.in", 
+    "kavipriya.j2020@vitstudent.ac.in", 
+    "chanthrika.rl2020@vitstudent.ac.in", 
+    "harsh.bhardwaj2020a@vitstudent.ac.in", 
+    "jatin.fulwani2020@vitstudent.ac.in", 
+    "parvathy.p2020@vitstudent.ac.in", 
+    "kritagya.kothari2020@vitstudent.ac.in", 
+    "vanshika.nehra2020@vitstudent.ac.in", 
+    "eeshani.majumder2020@vitstudent.ac.in", 
+    "varun.murpani2020@vitstudent.ac.in", 
+    "shalini.mishra2020@vitstudent.ac.in", 
+    "aaronmathew.k2020@vitstudent.ac.in", 
+    "shivam.raj2020a@vitstudent.ac.in", 
+    "jatin.dhall2020@vitstudent.ac.in", 
+    "tejasvni.dhir2020@vitstudent.ac.in", 
+    "atharvamanoj.dagaonkar2020@vitstudent.ac.in", 
+    "tanmay.ghodeswar2020@vitstudent.ac.in", 
+    "pranavram.k2020@vitstudent.ac.in", 
+    "arya.dubey2020@vitstudent.ac.in", 
+    "raehatsingh.nanda2020@vitstudent.ac.in", 
+    "yash.srivastava2020@vitstudent.ac.in", 
+    "kshitijramhari.bhosale2020@vitstudent.ac.in", 
+    "abhinandita.banerjee2020@vitstudent.ac.in", 
+    "malayyatin.sahasra2020@vitstudent.ac.in", 
+    "malharrahul.dharm2020@vitstudent.ac.in", 
+    "sowmiyalakshmi.g2020@vitstudent.ac.in", 
+    "neel.ghoshal2020@vitstudent.ac.in", 
+    "shreevardhan.shah2020@vitstudent.ac.in", 
+    "harsh.vardhan2020@vitstudent.ac.in", 
+    "ishaan.agarwal2020@vitstudent.ac.in", 
+    "kartik.gupta2020a@vitstudent.ac.in", 
+    "neha.valeti2020@vitstudent.ac.in", 
+    "pranav.r2020@vitstudent.ac.in", 
+    "aniket.banga2020@vitstudent.ac.in", 
+    "rohan.anand2020@vitstudent.ac.in", 
+    "khushi.jain2020@vitstudent.ac.in", 
+    "sneha.jayshri2020a@vitstudent.ac.in", 
+    "shreasi.sen2020@vitstudent.ac.in", 
+    "kanishka.gupta2020@vitstudent.ac.in", 
+    "shubh.kapil2020@vitstudent.ac.in", 
+    "harsh.rajpal2020@vitstudent.ac.in", 
+    "arjun.sivaraman2020@vitstudent.ac.in", 
+    "srinivasa.iswaryakumar2020@vitstudent.ac.in", 
+    "pratyksh.gupta2020@vitstudent.ac.in", 
+    "anirudh.vadera2020@vitstudent.ac.in", 
+    "arnish.2020@vitstudent.ac.in", 
+    "ishan.sati2020@vitstudent.ac.in", 
+    "aman.sharma2020b@vitstudent.ac.in", 
+    "mugdharaje.ashiya2020@vitstudent.ac.in", 
+    "sriramachandran.ramesh2020@vitstudent.ac.in", 
+    "henit.chobisa2020@vitstudent.ac.in", 
+    "Prawal.lamshal2020@vitstudent.ac.in", 
+    "priya.mishra2020a@vitstudent.ac.in", 
+    "naman.chopra2020@vitstudent.ac.in", 
+    "anushkamanish.bukkawar2020@vitstudent.ac.in", 
+    "saumya.verma2020@vitstudent.ac.in", 
+    "arjeet.anand2020@vitstudent.ac.in", 
+    "ishaanchandra.saxena2020@vitstudent.ac.in", 
+    "krina.panchal2020@vitstudent.ac.in", 
+    "garv.tandon2020@vitstudent.ac.in", 
+    "surbhit.agrawal2020@vitstudent.ac.in", 
+    "haneet.arya2020@vitstudent.ac.in", 
+    "pranav.desai2020@vitstudent.ac.in", 
+    "kaushal.agrawal2020@vitstudent.ac.in", 
+    "eshan.gupta2020@vitstudent.ac.in", 
+    "nimish.jain2020@vitstudent.ac.in", 
+    "samridh.agarwal2020@vitstudent.ac.in", 
+    "johannkyle.pinto2020@vitstudent.ac.in", 
+    "prince.garg2020@vitstudent.ac.in", 
+    "aryan.vishwakarma2020@vitstudent.ac.in", 
+    "Kanishka.tak2020@vitstudent.ac.in", 
+    "rishabhkumar.rai2020@vitstudent.ac.in", 
+    "nimishasara.george2020@vitstudent.ac.in", 
+    "adwaitaraj.modak2020@vitstudent.ac.in", 
+    "rehberbin.moin2020@vitstudent.ac.in", 
+    "satyam.raj2020@vitstudent.ac.in", 
+    "ameymahendra.gojam2020@vitstudent.ac.in", 
+    "saswata.basu2020@vitstudent.ac.in", 
+    "sanjana.ghose2020@vitstudent.ac.in", 
+    "adhithan.2020@vitstudent.ac.in", 
+    "devangana.v2020@vitstudent.ac.in", 
+    "umeshkumar.rajuv2020@vitstudent.ac.in", 
+    "ankit.sidana2020@vitstudent.ac.in", 
+    "pranit.modi2020@vitstudent.ac.in", 
+    "piyush.rana2020a@vitstudent.ac.in",       //1st Years
+    "abanmolbansal5@gmail.com"                  //Test Data
 ];
 
 
