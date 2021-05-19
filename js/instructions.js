@@ -16,19 +16,21 @@ document.onreadystatechange = function() {
   };
 
 //Validate password
-var password = document.getElementById("newPass"),
-confirm_password = document.getElementById("newPassword");
 
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } 
-  else {
-    confirm_password.setCustomValidity('');
-  }
+function checkPasswordMatch() {
+  var password = $("#newPass").val();
+  var confirmPassword = $("#newPassword").val();
+
+  if (password != confirmPassword)
+      $("#divCheckPasswordMatch").html("Passwords do not match!");
+  else
+      $("#divCheckPasswordMatch").html("");
 }
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+
+$(document).ready(function () {
+ $("#newPassword").keyup(checkPasswordMatch);
+ $("#newPass").keyup(checkPasswordMatch);
+});
 
 // JS for Password Visibility
 // fa-eye fa-eye-slash
@@ -79,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (mode) {
       case 'resetPassword':
         // Display reset password handler and UI.
+        document.getElementById("titleReset").innerHTML = "Reset your password";
+      //document.getElementById("messageReset").innerHTML = "for <b>" + accountEmail +"</b>";
         document.getElementById("resetPasswordUI").style.display = "block";
         handleResetPassword(auth, actionCode);
         break;
@@ -153,42 +157,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function handleResetPassword(auth, actionCode) {
+    console.log("inside handleResetPassword");
     // Localize the UI to the selected language as determined by the lang
     // parameter.
   
     // Verify the password reset code is valid.
     auth.verifyPasswordResetCode(actionCode).then((email) => {
+      console.log("inside verifyPasswordResetCode");
       var accountEmail = email;
-  
+
       // TODO: Show the reset screen with the user's email and ask the user for
       // the new password.
-      document.getElementById("title").innerHTML = "Reset your password";
-      document.getElementById("message").innerHTML = "for <b>" + accountEmail +"</b>";
-      document.getElementById("passField").style.display = "block";
-      var newPassword = document.getElementById("newPassword").value;
-  
+
+      document.getElementById("messageReset").innerHTML = "for <b>" + accountEmail +"</b>";
+      
       // Save the new password.
 
-      auth.confirmPasswordReset(actionCode, newPassword).then((resp) => {
-        // Password reset has been confirmed and new password updated.
-        document.getElementById("title").innerHTML = "Password changed";
-        document.getElementById("message").innerHTML = "You can now sign in with your new password";
-        document.getElementById("buttons").style.display = "block";
-        document.getElementById("passField").style.display = "none";
-
-        // TODO: Display a link back to the app, or sign-in the user directly
-        // if the page belongs to the same domain as the app:
-        // auth.signInWithEmailAndPassword(accountEmail, newPassword);
-  
-        // TODO: If a continue URL is available, display a button which on
-        // click redirects the user back to the app via continueUrl with
-        // additional state determined from that URL's parameters.
+      document.getElementById("reset-form").addEventListener('submit', savePassword);
+      var newPassword;
+      function savePassword(){
+        newPassword = document.getElementById("newPassword").value;
+        auth.confirmPasswordReset(actionCode, newPassword).then((resp) => {
+          console.log("Reset Password Called");
+          // Password reset has been confirmed and new password updated.
+          document.getElementById("passField").style.display = "none";
+          document.getElementById("titleReset").innerHTML = "Password changed";
+          document.getElementById("messageReset").innerHTML = "You can now sign in with your new password";
+          document.getElementById("buttonsReset").style.display = "block";
+          
+      
+          // TODO: Display a link back to the app, or sign-in the user directly
+          // if the page belongs to the same domain as the app:
+          // auth.signInWithEmailAndPassword(accountEmail, newPassword);
+      
+          // TODO: If a continue URL is available, display a button which on
+          // click redirects the user back to the app via continueUrl with
+          // additional state determined from that URL's parameters.
       }).catch((error) => {
         document.getElementById("title").innerHTML = "Try resetting your password again";
         document.getElementById("message").innerHTML = error;
         // Error occurred during confirmation. The code might have expired or the
         // password is too weak.
       });
+      }
+          
     }).catch((error) => {
         document.getElementById("title").innerHTML = "Try resetting your password again";
         document.getElementById("message").innerHTML = error;
@@ -197,5 +209,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /*
+  function confirmResetPassword(auth, actionCode){
+    
+    var newPassword = document.getElementById("newPassword").value;
+    console.log(newPassword);
+    auth.confirmPasswordReset(actionCode, newPassword).then((resp) => {
+      console.log("Reset Password Called");
+      // Password reset has been confirmed and new password updated.
+      document.getElementById("passField").style.display = "none";
+      document.getElementById("title").innerHTML = "Password changed";
+      document.getElementById("message").innerHTML = "You can now sign in with your new password";
+      document.getElementById("buttons").style.display = "block";
+      
   
-
+      // TODO: Display a link back to the app, or sign-in the user directly
+      // if the page belongs to the same domain as the app:
+      // auth.signInWithEmailAndPassword(accountEmail, newPassword);
+  
+      // TODO: If a continue URL is available, display a button which on
+      // click redirects the user back to the app via continueUrl with
+      // additional state determined from that URL's parameters.
+    }).catch((error) => {
+      document.getElementById("title").innerHTML = "Try resetting your password again";
+      document.getElementById("message").innerHTML = error;
+      // Error occurred during confirmation. The code might have expired or the
+      // password is too weak.
+    });
+  } 
+*/
+  $("#reset-form").submit(function(e) {
+    e.preventDefault();
+  });
+  

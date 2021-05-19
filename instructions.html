@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css links -->
-    <link type="text/css" rel="stylesheet" href="css/instructions.css"/>
-    <link type="text/css" rel="stylesheet" href="css/navbar.css"/>
+    <link type="text/css" rel="stylesheet" href="css/instructions.css" />
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -16,77 +16,111 @@
       rel="stylesheet"
       href="webfontkit-20201125-062530/stylesheet.css"
     />
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icons/favicon.png" />
     <!-- title -->
     <title>ADG | Admin Portal</title>
   </head>
-<body>
-  <div id="loader" class="center"></div>
+  <body>
+    <div id="loader" class="center"></div>
 
-  <!-- Verify Email -->
+    <!-- Verify Email -->
 
-    <div class="main" id="verifyEmailUI" style="display: none;">
-        <img class="connect-logo" src="icons/Group 2.svg" style="margin-top: 0; margin-bottom:0"/>
-        <p id="title"></p>
-        <p id="message"></p>
-        <br>
-        <!-- <div class="store-icons">
+    <div class="main" id="verifyEmailUI" style="display: none">
+      <img
+        class="connect-logo"
+        src="icons/Group 2.svg"
+        style="margin-top: 0; margin-bottom: 0"
+      />
+      <p id="title"></p>
+      <p id="message"></p>
+      <br />
+      <!-- <div class="store-icons">
             <img class="store" src="icons/appstore.png" alt="appstore">
             <br>
             <img class="store" id="play" src="icons/playstore.png" alt="playstore">
         </div> -->
-        <div class="buttons" id="buttons" style="display: none;">
-          <button class="instructions" onclick="window.location.href='tutorial.html'">Instructions</button>
-        <br><br>
-        <button class="admin-login" onclick="window.location.href='index.html'">Admin Login >></button>
-        </div>
+      <div class="buttons" id="buttons" style="display: none">
+        <button
+          class="instructions"
+          onclick="window.location.href='tutorial.html'"
+        >
+          Instructions
+        </button>
+        <br /><br />
+        <button class="admin-login" onclick="window.location.href='index.html'">
+          Admin Login >>
+        </button>
+      </div>
     </div>
 
+    <!-- Reset Password -->
 
-<!-- Reset Password -->
+    <div class="main" id="resetPasswordUI" style="display: none">
+      <img
+        class="connect-logo"
+        src="icons/Group 2.svg"
+        style="margin-top: 0; margin-bottom: 0"
+      />
+      <p id="titleReset"></p>
+      <p id="messageReset"></p>
+      <br />
+      <br />
+      <div class="passField" id="passField">
+        <form id="reset-form">
+          <input
+            type="password"
+            id="newPass"
+            name="password1"
+            required
+            placeholder="New Password"
+          />
+          <i class="far fa-eye" id="togglePassword1"></i><br /><br />
+          <input
+            type="password"
+            id="newPassword"
+            name="password2"
+            required
+            placeholder="Confirm New Password"
+          /><div class="resetpasswordAlert" id="divCheckPasswordMatch"></div>
+          <br /><br />
+          <button class="signup-btn" type="submit" id="change-pass">
+            Save
+          </button>
+        </form>
+      </div>
+      <br />
+      <div class="buttons" id="buttonsReset" style="display: none">
+        <button class="admin-login" onclick="window.location.href='index.html'">
+          Admin Login >>
+        </button>
+      </div>
+    </div>
 
-    <div class="main" id="resetPasswordUI" style="display: none;">
-      <img class="connect-logo" src="icons/Group 2.svg" style="margin-top: 0; margin-bottom:0"/>
-      <p id="title"></p>
+    <!-- Recover Email -->
+
+    <div class="main" id="recoverEmailUI" style="display: none">
+      <img
+        class="connect-logo"
+        src="icons/Group 2.svg"
+        style="margin-top: 0; margin-bottom: 0"
+      />
       <p id="message"></p>
-      <br>
-      <br>
-      <div class="passField">
-        <form>
-        <input type="password" id="newPass" name="password1" required placeholder="New Password"/>
-        <i class="far fa-eye" id="togglePassword1"></i><br /><br />
-        <input type="password" id="newPassword" name="password2" required placeholder="Confirm New Password"/> <br><br>
-        <button class="signup-btn" type="submit" id="change=pass">Save</button>
-      </form>
-      </div>
-      <br>
-      <div class="buttons" id="buttons" style="display: none;">
-      <button class="admin-login" onclick="window.location.href='index.html'">Admin Login >></button>
-      </div>
-  </div>
 
+      <br />
+    </div>
 
-<!-- Recover Email -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
 
-  <div class="main" id="recoverEmailUI" style="display: none;">
-    <img class="connect-logo" src="icons/Group 2.svg" style="margin-top: 0; margin-bottom:0"/>
-    <p id="message"></p>
-
-    <br>
-    
-</div>
-    
-
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
-     
-     <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
     <!-- <script src="js/firebase.js"></script> -->
     <script src="js/instructions.js"></script>
-</body>
+  </body>
 </html>

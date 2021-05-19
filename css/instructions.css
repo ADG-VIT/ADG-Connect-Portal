@@ -30,7 +30,7 @@ p {
   font-size: 18px;
 }
 
-p#title {
+p#title, p#titleReset {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 5%;

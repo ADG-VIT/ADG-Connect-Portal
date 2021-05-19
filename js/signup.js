@@ -1,19 +1,5 @@
 //Validate password
-//var password = document.getElementById("signupPass"),
-//confirm_password = document.getElementById("signupPassConfirm");
-/*
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-    console.log("Password Error");
-  } 
-  else {
-    confirm_password.setCustomValidity('');
-  }
-}
-password.onchange = validatePassword();
-confirm_password.onkeyup = validatePassword();
-*/
+
 function checkPasswordMatch() {
   var password = $("#signupPass").val();
   var confirmPassword = $("#signupPassConfirm").val();
