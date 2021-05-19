@@ -209,13 +209,23 @@ button.logout {
 }
 
 .out1 {
-  margin-top: 150%;
+  width: 18%;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-end; */
   align-items: center;
-  align-content: center;
-  vertical-align: baseline;
+  justify-content: center;
+  padding: 2%;
+  align-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
+.out2{
+  display: none;
+}
 button.privacy {
   background-color: #ffffff;
   border: 0.5px solid #000000;
@@ -280,8 +290,8 @@ button.privacy {
 } */
 
 @media screen and (max-width: 700px) {
-  body {
-    padding: 2% !important;
+  html{
+    width: 100vw;
   }
   .left {
     width: 100%;
@@ -294,7 +304,20 @@ button.privacy {
   }
 
   .out1 {
-    display: none;
+   display: none;
+  }
+  .out2{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    align-content: space-evenly;
+    position: absolute;
+    bottom: 0;
   }
   img.logo {
     width: 90%;
@@ -305,6 +328,7 @@ button.privacy {
   }
   .middle {
     width: 100%;
+    padding: 5%;
   }
   li {
     display: inline;

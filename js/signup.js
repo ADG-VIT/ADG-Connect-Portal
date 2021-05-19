@@ -35,7 +35,7 @@ togglePassword1.addEventListener("click", function (e) {
 
   //validate reg no
   function regValidation(){
-    document.getElementById("sign-up").innerHTML = "Loading...";
+    document.getElementById("sign-up").innerHTML = "Signing Up...";
     var regNoCheck = document.getElementById("signupRegno").value;
     var n = regNoArr.includes(regNoCheck);
     var i = regNoArr.indexOf(regNoCheck);

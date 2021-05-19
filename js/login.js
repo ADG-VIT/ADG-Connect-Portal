@@ -21,7 +21,7 @@ document.getElementById("signinForm").addEventListener('submit', login);
 
 function login(){
   console.log("0");
-  document.getElementById("login-btn").innerHTML = "Loading...";
+  document.getElementById("login-btn").innerHTML = "Logging In...";
     var ref = firebase.database().ref().child("Users");
     var loginID = document.getElementById("loginID").value;
     var loginPass = document.getElementById("loginPass").value;
@@ -37,7 +37,7 @@ function login(){
               console.log(admin);
               if (admin == true){
                 //document.querySelector("#loader1").style.display = "none";
-                alert("Signed in Successfully");
+                //alert("Signed in Successfully");
                 console.log("redirect");
                 window.location.assign("newmeet.html");
                 //adminId = user.uid;
@@ -47,15 +47,15 @@ function login(){
                 console.log("3");
                 firebase.auth().signOut();
                 window.location.assign("jrlogin.html");
-                document.getElementById("login-btn").innerHTML = "Login";
+                //document.getElementById("login-btn").innerHTML = "Login";
               }
             });
           })
           .catch((error) => {
             //document.querySelector("#loader1").style.display = "none";
+            document.getElementById("login-btn").innerHTML = "Login";
             var errorCode = error.code;
             var errorMessage = error.message;
-            document.getElementById("login-btn").innerHTML = "Login";
             alert(errorMessage);
           });
           
@@ -64,6 +64,7 @@ function login(){
 auth.onAuthStateChanged(function(user){
     if(user){
         console.log("Already Logged In");
+        document.getElementById("login-btn").innerHTML = "Logging In...";
         var ref = firebase.database().ref().child("Users");
         var user = firebase.auth().currentUser;
         var loginID = user.email;
