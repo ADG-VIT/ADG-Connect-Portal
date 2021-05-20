@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
 }
 
-#loader{
+#loader {
   /* display: none; */
   border: 12px solid #f3f3f3;
   border-radius: 50%;
@@ -22,11 +22,11 @@ body {
 
 @keyframes spin {
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-.passwordAlert{
+.passwordAlert {
   margin-left: 135px;
 }
 
@@ -179,10 +179,10 @@ button.logout {
   margin-left: 3px;
 }
 
-.initial{
+.initial {
   height: 40px;
   width: 40px;
-  background: #0091FB;
+  background: #0091fb;
   border-radius: 50%;
   color: #ffffff;
   font-size: 18px;
@@ -192,7 +192,7 @@ button.logout {
   justify-content: center;
 }
 
-.admin-name{
+.admin-name {
   font-size: 15px;
   font-weight: 700;
   padding: 5px;
@@ -203,7 +203,7 @@ button.logout {
   width: 120px;
 }
 
-.name-desc{
+.name-desc {
   font-size: 12px;
   font-weight: 300;
 }
@@ -212,7 +212,7 @@ button.logout {
   width: 18%;
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   /* align-items: flex-end; */
   align-items: center;
   justify-content: center;
@@ -223,7 +223,7 @@ button.logout {
   left: 0;
 }
 
-.out2{
+.out2 {
   display: none;
 }
 button.privacy {
@@ -290,7 +290,7 @@ button.privacy {
 } */
 
 @media screen and (max-width: 700px) {
-  html{
+  html {
     width: 100vw;
   }
   .left {
@@ -304,9 +304,9 @@ button.privacy {
   }
 
   .out1 {
-   display: none;
+    display: none;
   }
-  .out2{
+  .out2 {
     width: 100%;
     text-align: center;
     display: flex;
@@ -342,4 +342,3 @@ button.privacy {
     float: left;
   }
 }
-
