@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url("./assets/FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-family: SF Pro Display;
+  letter-spacing: 0.025rem;
+}
+
+#cover-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  letter-spacing: 2.5%;
+}
+
+.ADGlogo {
+    position: absolute;
+    height: 3rem;
+    top: 50px;
+    left: 5%;
+}
+
+.Left {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.intro {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.connect-logo {
+    height: 4rem;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    color: #3e74ff;
+    margin-bottom: 5px;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.4px 0.4px 0.8px #3e74ff;
+    font-weight: 600;
+}
+
+.intro hr {
+    border: none;
+    height: 2px;
+    width: 15rem;
+    margin-bottom: 20px;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.stores {
+    width: 17rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stores img {
+    height: 3rem;
+}
+
+#google{
+  margin-left: 1rem;
+  cursor: pointer;
+}
+#apple{
+  cursor: pointer;
+}
+
+button {
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 1rem;
+  border: 2px solid #3e74ff;
+  padding: 1rem 2rem;
+  font-family: SF Pro Display;
+  width: 17rem;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+button::after,
+button::before {
+  border-radius: 15px;
+}
+
+.material-bubble {
+  background-color: transparent;
+  color: white;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.material-bubble:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.material-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3e74ff;
+  transition: opacity 0.3s, border 0.3s;
+  border-radius: 1rem;
+}
+
+.material-bubble:hover::before {
+  opacity: 0;
+  border-radius: 15px;
+}
+
+.material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  width: 500px;
+  height: 200px;
+  background-color: #3e74ff;
+  border-color: transparent;
+  border-radius: 15px;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.material-bubble:hover::after {
+  opacity: 1;
+  transform-origin: 100px 100px;
+  transform: scale(1) translate(-10px, -70px);
+}
+
+.cover-image {
+  z-index: -1;
+  width: 70%;
+  position: absolute;
+  right: -10%;
+  top: -5%;
+}
+
+@media screen and (max-width: 1200px) {
+	.cover-image {
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        right: -10%;
+        top: 0;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+    .Left {
+        width: 100%;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .cover-image {
+        display: none;
+    }
+
+    #cover-page {
+        background-image: url('./assets/Group\ 16073.svg');
+        background-size: 120vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: border-box;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro{
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+	html {
+		font-size: 90%;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	html {
+		font-size: 79%;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	html {
+		font-size: 50%;
+	}
+}

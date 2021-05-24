@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" 
+    integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css" 
+    integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/appTutorial.css" />
+    <!-- Font Awesome....we have to add it before we start using their icons -->
+    <script defer src="https://kit.fontawesome.com/e87d687bba.js"></script>
+    <!--Bootstrap js files-->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+	
+    <title>ADG Connect</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <ul id="menu">
+      <nav >
+        <a href="tutorial.html"><img class="nav-logo " src="./assets/Logo Title.svg" alt="nav-logo" ></a>
+        
+        <div class="nav-links" id="navLinks">
+        <!-- <i class="far fa fa-window-close" onclick="hideMenu()"></i> -->
+        <!-- <a href="index.html"><img class="nav-logo-2 " src="./assets/Logo Title.svg" alt="nav-logo-2" ></a> -->
+        <ul>   
+        <li data-menuanchor="Signup"><a href="#signup" class="effect"onclick="delayedGreeting();">Signup</a></li>
+        <li data-menuanchor="Login"><a href="#login" class="effect"onclick="delayedGreeting();">Login</a></li>
+        <li data-menuanchor="Home"><a href="#home" class="effect"onclick="delayedGreeting();">Home</a></li>
+        <li data-menuanchor="Alerts"><a href="#alerts" class="effect"onclick="delayedGreeting();">Alerts</a></li>
+        <li data-menuanchor="Acknowledgement"><a href="#acknowledgement" class="effect"onclick="delayedGreeting();">Acknowledgement</a></li>
+        <li data-menuanchor="MOM"><a href="#mom" class="effect"onclick="delayedGreeting();">MOM</a></li>
+        <li data-menuanchor="Profile"><a href="#profile" class="effect"onclick="delayedGreeting();"> Profile</a></li>
+        </ul>
+        </div>    
+        <i class="fas fa fa-bars" onclick="showMenu()"></i>
+            
+       </nav>
+    </ul>
+    
+
+      <!-- fullpage.js -->
+      <div id="fullpage">
+
+        <!-- Sign Up section -->
+        <div class="section section-signup" data-anchor="signup">
+            <div class="responsive-container">
+       <div class="space-1">
+
+       </div>
+       <div class="fullpage-container container-signup">
+           <div class="info">
+                <h2>Sign Up</h2>
+                <p>The First Step is to Sign Up on the Web Portal.</p>
+                <p>Use your correct details in the signup.</p>
+                <p>In Case of any Issues, Contact us</p>
+           </div>
+           <div class="img-container">
+               <div class="space">
+               </div>
+               <div class="img">
+                   <img src="./assets/SignUP DUmmuy.svg">
+               </div>
+           </div>
+       </div>
+   </div>
+        </div>
+
+
+        <!-- Login section -->
+        <div class="section section-login" data-anchor="login">
+            <div class="responsive-container">
+        <div class="space-1">
+ 
+        </div>
+        <div class="fullpage-container container-login">
+            <div class="info">
+                <h2>Login</h2>
+                <p>When you open the app for the first time, you’ll see a Login button.</p>
+                <p>Please note that only members of ADG are allowed on this platform.</p>
+                <p>Use the Account credentials you filled in while signing up on the Web Portal to Login. If you face any issues regarding the same Contact Us</p>
+            </div>
+            <div class="img-container">
+                <div class="space">
+                </div>
+                <div class="img">
+                    <img src="./assets/Landing.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    
+        <!-- Home section -->
+        <div class="section section-home" data-anchor="home">
+            <div class="responsive-container">
+        <div class="space-1">
+ 
+        </div>
+        <div class="fullpage-container container-home">
+            <div class="info">
+                <h2>Home</h2>
+                <p>Welcome to the Home Screen of the ADG Connect app.</p>
+                <p>This is where you can find information about each domain and quickly glance over upcoming meetings and tasks under Notifications.</p>
+            </div>
+            <div class="img-container">
+                <div class="space">
+                </div>
+                <div class="img">
+                    <img src="./assets/Home.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    
+        <!-- Alerts section -->
+        <div class="section section-alerts" data-anchor="alerts">
+            <div class="responsive-container">
+        <div class="space-1">
+ 
+        </div>
+        <div class="fullpage-container container-alerts">
+            <div class="info">
+                <h2>Alerts</h2>
+                <p>Alerts page holds all your Meetings and Tasks.</p>
+                <p>All your upcoming meetings and tasks are well organised in this section of the app.</p>
+                <p>You can Acknowledge for a meeting that you will be joining or you can post a reason for your Unavailablity.</p>
+            </div>
+            <div class="img-container">
+                <div class="space">
+                </div>
+                <div class="img">
+                    <img src="./assets/Alerts Team.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    
+        <!-- Acknowledgement section -->
+        <div class="section section-acknowledgement" data-anchor="acknowledgement">
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-acknowledgement">
+                <div class="info">
+                  <h2>Acknowledgement</h2>
+                  <p>There are two buttons under each Meeting or Task posted in the Alert Section.</p>
+                  <p>Please Note that you can only choose one option.</p>
+                  <p>Clicking on Acknowledge means that you’re taking part in the Meeting or Task.</p>
+                  <p>Clicking on Unavailable will open a popup. You should post your reasons for being unavailable
+                    here.</p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img">
+                    <img src="assets/Unavailable.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    
+        <!-- MOM section -->
+        <div class="section section-mom" data-anchor="mom">
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-mom">
+            
+                <div class="info">
+                  <h2>MOM</h2>
+                  <p>Minutes of Meeting or MOM are posted under this section.</p>
+                  <p>Click on any meeting in the list to open the MOM.</p>
+                  <p>Here you can find a short summary of what the meeting was called for and the points discussed.
+                  </p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img-mom">
+                    <img src="assets/Group 16080.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    
+        <!-- Profile section -->
+        <div class="section section-profile" data-anchor="profile">
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-profile">
+                <div class="info">
+                  <h2>Profile</h2>
+                  <p>Your profile details and the teams that you are a part of are displayed here.</p>
+                  <p>In case of any changes or updates do let us know.</p>
+                  <p>If you choose to Reset your Password, a link is sent to the Registered E-Mail ID to do the same.
+                  </p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img">
+                    <img src="assets/Profile.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Script for MOM -->
+      <script>
+        function imageCheck() {
+          if (window.innerHeight >= 1023) {
+            if (window.innerWidth <= 1365) {
+              document.querySelector(".img-mom img").src = "assets/MOM Detail.svg";
+            }
+            else {
+              document.querySelector(".img-mom img").src = "assets/Group 16080.svg";
+            }
+          }
+          else {
+            if (window.innerWidth <= 700) {
+              document.querySelector(".img-mom img").src = "assets/MOM Detail.svg";
+            }
+            else {
+              document.querySelector(".img-mom img").src = "assets/Group 16080.svg";
+            }
+          }
+        }
+        imageCheck();
+        window.addEventListener("resize", imageCheck);
+
+      </script>
+      <script>
+        new fullpage("#fullpage", {
+          //options here
+          autoScrolling: true,
+          anchors: ["signup", "login", "home", "alerts", "acknowledgement", "mom", "profile"],
+          scrollHorizontally: true,
+          animateAnchor:true,
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: ["Signup", "Login", "Home", "Alerts", "Acknowledgement", "MOM", "Profile"],
+          showActiveTooltip: false,
+          menu: '#menu',
+          autoScrolling: true,
+          slidesNavigation: true
+        });
+        // --------javascript for toggle menu--------
+        var navLinks=document.getElementById("navLinks");
+        function showMenu()
+        {
+          navLinks.style.right="0";
+          
+        }
+        
+        function sleep(ms) {
+           return new Promise(
+          resolve => setTimeout(resolve, ms)
+            );
+          }
+
+        async function delayedGreeting() {
+        
+        await sleep(150);
+          
+          navLinks.style.right="-400px";
+        
+        }
+      
+      </script>
+</body>
+</html>
