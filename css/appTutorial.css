@@ -127,7 +127,7 @@ nav .fa{
 .nav-links{
   position: absolute;
   background-color: #111111;
-  background-image: url("./assets/navbar_background_img.png");
+  background-image: url("../assets/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -194,7 +194,7 @@ nav .fa{
 .nav-links{
   position: absolute;
   background-color: #111111;
-  background-image: url("./assets/navbar_background_img.png");
+  background-image: url("../assets/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -249,7 +249,7 @@ nav .fa{
 .nav-links{
   position: absolute;
   background-color: #111111;
-  background-image: url("./assets/navbar_background_img.png");
+  background-image: url("../assets/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

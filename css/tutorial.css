@@ -200,7 +200,7 @@ button::before {
     }
 
     #cover-page {
-        background-image: url('./assets/Group\ 16073.svg');
+        background-image: url('../assets/Group\ 16073.svg');
         background-size: 120vh;
         background-repeat: no-repeat;
         background-position: center;
