@@ -2,22 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "sf_pro_displayregular";
 }
 
 *, *::after, *::before {
     box-sizing: border-box;
   }
-
+/*
 @font-face {
   font-family: SF Pro Display;
   src: url("./assets/FontsFree-Net-SFProDisplay-Regular.ttf");
 }
-
+*/
 body {
   background-color: black;
   color: white;
   overflow: hidden;
-  font-family: SF Pro Display;
+  /* font-family: SF Pro Display; */
   letter-spacing: 0.025rem;
 }
 
@@ -105,7 +106,7 @@ button {
   border-radius: 1rem;
   border: 2px solid #3e74ff;
   padding: 1rem 2rem;
-  font-family: SF Pro Display;
+  /* font-family: SF Pro Display; */
   width: 17rem;
 }
 
