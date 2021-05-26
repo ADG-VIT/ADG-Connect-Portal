@@ -45,6 +45,7 @@ togglePassword1.addEventListener("click", function (e) {
     }
     else{
         alert("You are not a member of ADG");
+        document.getElementById("sign-up").innerHTML = "Sign Up";
     }
   }
 
@@ -55,6 +56,7 @@ togglePassword1.addEventListener("click", function (e) {
       if(!form_data.has("langs[]"))
       {
         alert('Select atleast one team');
+        document.getElementById("sign-up").innerHTML = "Sign Up";
         return false;
       }
       else
@@ -85,6 +87,7 @@ togglePassword1.addEventListener("click", function (e) {
         var errorMessage = error.message;
         console.log(errorCode);
         alert(errorMessage);
+        document.getElementById("sign-up").innerHTML = "Sign Up";
         // ..
       });
     })

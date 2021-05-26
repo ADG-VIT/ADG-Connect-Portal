@@ -1,6 +1,13 @@
 //Reg No array
 
 var regNoArr = [
+    "19BCE0246",
+    "19BIT0227",
+    "19BCE0076",
+    "19MIS0411",
+    "19BCI0232",
+    "19BCE2578",
+    "19BCI0012",
     "19BCE0171", //Internals Team
     "19BCE2227",
     "19BCE0922",
@@ -124,11 +131,18 @@ var regNoArr = [
     "20MIS0190", 
     "20MIS0277", 
     "20MIS0410", //1st Years
-    "19BCE0600"  //Test Data
+    "21GST0000"  //Test Data
 ];
 
 
 var emailArr = [
+    "aviroop.nandy2019@vitstudent.ac.in",
+    "divesh.arora2019@vitstudent.ac.in",
+    "nikhilkumar.parashar2019@vitstudent.ac.in",
+    "dev.swaika2019@vitstudent.ac.in",
+    "sahitya.madipalli2019@vitstudent.ac.in",
+    "achintarya.mishra2019@gmail.vit.ac.in",
+    "pratham.sahay2019@vitstudent.ac.in",
     "dev.sharma2019@vitstudent.ac.in",              //Internals Team
     "panshul.jindal2019@vitstudent.ac.in",
     "vidushi.gupta2019@vitstudent.ac.in",
@@ -252,7 +266,7 @@ var emailArr = [
     "ankit.sidana2020@vitstudent.ac.in", 
     "pranit.modi2020@vitstudent.ac.in", 
     "piyush.rana2020a@vitstudent.ac.in",       //1st Years
-    "abanmolbansal5@gmail.com"                  //Test Data
+    "appledevelopersgroup@gmail.com"                  //Test Data
 ];
 
 
