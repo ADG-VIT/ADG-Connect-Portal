@@ -24,7 +24,7 @@ const renderUsers = async () => {
 
   userList.forEach((user) => {
     user.teams.forEach((team) => {
-      if ( (user.isAdmin) == false){
+      if ( (user.isAdmin) == false && (user.name) != "Guest User"){
         teams[team].innerHTML += `<div class="member-card"> <span class="tooltiptext">${user.email} <br> ${user.phone}</span>
         <div class="member-name">${user.name}</div>
         <div class="member-details">${user.regNo}</div>

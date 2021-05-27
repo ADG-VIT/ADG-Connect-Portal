@@ -90,7 +90,8 @@ function selectAllDataCore(){
         var member = CurrentRecord.val().name;
         var meetuserid = CurrentRecord.val().uid;
         var boardMember = CurrentRecord.val().isAdmin;
-          if(boardMember==false){
+        var guest = CurrentRecord.val().name;
+          if(boardMember==false && guest != "Guest User"){
             AddItemsToTable(member, meetuserid);
           }
         //AddItemsToTable(member, meetuserid);
@@ -119,7 +120,8 @@ function selectAllData(){
         if (n==true){
           //console.log("hi");
           var boardMember = CurrentRecord.val().isAdmin;
-          if(boardMember==false){
+          var guest = CurrentRecord.val().name;
+          if(boardMember==false && guest != "Guest User"){
             AddItemsToTable(member, meetuserid);
           }
         }
