@@ -128,7 +128,10 @@ function selectAllDataCore(){
       function(CurrentRecord){
         var member = CurrentRecord.val().name;
         var meetuserid = CurrentRecord.val().uid;
-        AddItemsToTable(member, meetuserid);
+        var boardMember = CurrentRecord.val().isAdmin;
+        if(boardMember==false){
+          AddItemsToTable(member, meetuserid);
+        }
       }
     );
   });
@@ -153,7 +156,10 @@ function selectAllData(){
         var n = teamId.includes(parseInt(chosenTeam));
         if (n==true){
           //console.log("hi");
-          AddItemsToTable(member, meetuserid);
+          var boardMember = CurrentRecord.val().isAdmin;
+          if(boardMember==false){
+            AddItemsToTable(member, meetuserid);
+          }
         }
         else{
           //console.log("bye");

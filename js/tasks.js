@@ -89,7 +89,11 @@ function selectAllDataCore(){
       function(CurrentRecord){
         var member = CurrentRecord.val().name;
         var meetuserid = CurrentRecord.val().uid;
-        AddItemsToTable(member, meetuserid);
+        var boardMember = CurrentRecord.val().isAdmin;
+          if(boardMember==false){
+            AddItemsToTable(member, meetuserid);
+          }
+        //AddItemsToTable(member, meetuserid);
       }
     );
   });
@@ -114,7 +118,10 @@ function selectAllData(){
         var n = teamId.includes(parseInt(chosenTeam));
         if (n==true){
           //console.log("hi");
-          AddItemsToTable(member, meetuserid);
+          var boardMember = CurrentRecord.val().isAdmin;
+          if(boardMember==false){
+            AddItemsToTable(member, meetuserid);
+          }
         }
         else{
           //console.log("bye");
@@ -133,7 +140,7 @@ function AddItemsToTable(member, meetuserid){
   table.appendChild(trow);
   }
 
-  //Search bar in Modal
+//Search bar in Modal
 function searchTable() {
 var input, filter, table, tr, th, i, txtValue;
 input = document.getElementById("searchBar");
