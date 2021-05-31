@@ -141,7 +141,7 @@ var emailArr = [
     "nikhilkumar.parashar2019@vitstudent.ac.in",
     "dev.swaika2019@vitstudent.ac.in",
     "sahitya.madipalli2019@vitstudent.ac.in",
-    "achintarya.mishra2019@gmail.vit.ac.in",
+    "achintarya.mishra2019@vitstudent.ac.in",
     "pratham.sahay2019@vitstudent.ac.in",
     "dev.sharma2019@vitstudent.ac.in",              //Internals Team
     "panshul.jindal2019@vitstudent.ac.in",
