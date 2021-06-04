@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css links -->
+    <link type="text/css" rel="stylesheet" href="css/login.css" />
+    <link type="text/css" rel="stylesheet" href="css/navbar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="webfontkit-20201125-062530/stylesheet.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png" />
+    <!-- title -->
+    <title>ADG Connect</title>
+  </head>
+  <body>
+    <div id="loader" class="center"></div>
+    <!-- <div id="loader1" class="center" style="display:none"></div> -->
+    <div class="left">
+      <!--NAVBAR Starts-->
+      <nav class="nav-active" id="navbar">
+        <!-- Logo in Navbar -->
+        <div class="logonav">
+          <img class="logo" src="icons/Group 2.svg" />
+        </div>
+        <!-- Nav Links -->
+        <!-- <ul class="navlinks">
+          <li class="loginLink">
+            <img class="icon" src="icons/login.svg" alt="" />
+            <a href="index.html">Admin Login</a>
+          </li>
+
+          <li class="signupLink">
+            <img class="icon" src="icons/signup.svg" alt="" />
+            <a href="signup.html">Sign Up</a>
+          </li>
+        </ul> -->
+        <div class="out1">
+          <a href="pp.html" target="_blank">
+            <button class="privacy">View our Privacy Policy</button></a
+          > 
+          <a href="tutorial.html" target="_blank" style="margin-top:5%">
+            <button class="privacy">Instructions</button></a
+          >
+        </div>
+      </nav>
+      <!--NAVBAR Ends-->
+    </div>
+
+    <div class="middle">
+      <h2>Verification Check</h2>
+      <h4>Enter your Mail ID to check if it is verified</h4>
+      <br /><br /><br />
+      <form role="form" id="signinForm">
+        <label class="user" for="userid">Email ID:</label>
+        <input
+          type="text"
+          id="loginID"
+          class="form-control"
+          name="userid"
+          required
+        /><br /><br />
+        <label class="pass" for="password">Password:</label>
+        <input
+          type="password"
+          id="loginPass"
+          class="form-control"
+          name="password"
+          required
+        />
+        <i class="far fa-eye" id="togglePassword"></i>
+        <br /><br /><br />
+        <button class="login-btn" type="submit" id="login-btn">Login</button>
+        
+        <!-- <button class="login-btn" id="logout" onclick="signOut()">Out</button> -->
+      </form>
+    </div>
+    <div class="out2">
+      <a href="pp.html" target="_blank">
+        <button class="privacy">View our Privacy Policy</button></a
+      >
+    </div>
+    <div class="right"></div>
+  </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-messaging.js"></script> -->
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+  <script src="js/firebase.js"></script>
+  <script>
+      // JS for Password Visibility
+// fa-eye fa-eye-slash
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#loginPass");
+
+togglePassword.addEventListener("click", function (e) {
+  // toggle the type attribute
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  // toggle the icon
+  this.classList.toggle("fa-eye-slash");
+});
+
+var adminId;
+
+//Authentication - Firebase - Login 
+const auth = firebase.auth();
+
+document.getElementById("signinForm").addEventListener('submit', login);
+
+function login(){
+  console.log("0");
+  document.getElementById("login-btn").innerHTML = "Logging In...";
+    var ref = firebase.database().ref().child("Users");
+    var loginID = document.getElementById("loginID").value;
+    var loginPass = document.getElementById("loginPass").value;
+
+    firebase.auth().signInWithEmailAndPassword(loginID, loginPass)
+          .then((userCredential) => {
+            // Signed in
+            var user = userCredential.user;
+            if(user.emailVerified == true){
+                document.getElementById("login-btn").innerHTML = "Email is Verified";
+                firebase.auth().signOut();
+            }
+            //window.location.assign("newmeet.html");
+            else{
+                console.log("mail");
+                    console.log(user);
+                    user.sendEmailVerification().then(function() {
+                    // Email sent.
+                    console.log("Sent");
+                    document.getElementById("login-btn").innerHTML = "Email Sent";
+                    }).catch(function(error) {
+                    // An error happened.
+                    console.log("Not Sent");
+                    });
+                    firebase.auth().signOut();
+                }
+          })
+          .catch((error) => {
+            //document.querySelector("#loader1").style.display = "none";
+            document.getElementById("login-btn").innerHTML = "Login";
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage);
+          });
+        }
+        $("#signinForm").submit(function(e) {
+            e.preventDefault();
+        });
+  </script>
+</html>
