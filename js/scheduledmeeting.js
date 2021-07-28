@@ -102,7 +102,7 @@ const selectMeeting = async (mId) => {
           <div>
             <details>
               <summary class="reason">Reason &#9660;</summary>
-              <p>${user?.meetings?.meetingId || "Unavailable"}</p>
+              <p>${user?.meetings?.meetingId || "Oops, Not Found"}</p>
             </details>
           </div>
           <div class="changestatus-btn" id="${i}"onclick="changeStatus(this.id, 1)">Change Status</div>

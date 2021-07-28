@@ -167,6 +167,22 @@ function writeUserData(unixdate,link,venue,title,chosenTeam,pushmeetuserArr)
 var fcmArr = [];
 //var newArr = [];
 var notif;
+var adminFcmArr = [];
+
+function getAdminFCM(){
+  console.log("Getting Admin FCM");
+  return new Promise(function(resolve, reject){
+      var ref = firebase.database().ref("Users");
+      ref.orderByChild("isAdmin").equalTo(true).on("child_added", function(snapshot) {
+        // console.log(snapshot.key);
+        var adminfcm = snapshot.val().fcm;
+        // console.log(adminfcm);
+        fcmArr.push(adminfcm);
+        console.log(fcmArr);
+        resolve(fcmArr);
+      });
+    })}
+  
 
 function getFCM(){
   console.log("Getting FCM");
@@ -196,7 +212,7 @@ function getFCM(){
 }
 
 function getNotifData(){
-  //console.log("starting notif data fetch");
+  console.log("starting notif data fetch");
   //console.log(pushmeetuserArr);
   //var userfcm;
   //var pushmeetuserArr = ["j8wRGcEgJrMCUAchjfTrD466iFp2", "8YUM5A4T5NaATiU2OKmrx4kQ4BS2", "NE0SB62uEubuo5BGaQy0X6Q4xkD2"];
@@ -251,6 +267,8 @@ function sendNotification(){
 
 async function sendNotif(){
   console.log('Send Notif');
+  await getAdminFCM();
+  console.log("Admin FCM Pushed")
   await getFCM();
   console.log("FCM Array Formed");
   await getNotifData();
