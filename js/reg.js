@@ -147,7 +147,8 @@ var regNoArr = [
     "20MIS0277", 
     "20MIS0410",
     "20BIT0301",
-    "20BEC0221", //1st Years
+    "20BEC0221",
+    "20BCI0246", //1st Years
     "21GST0000"  //Test Data
 ];
 
@@ -299,7 +300,8 @@ var emailArr = [
     "pranit.modi2020@vitstudent.ac.in", 
     "piyush.rana2020a@vitstudent.ac.in",
     "devika.varshney2020@vitstudent.ac.in",
-    "priya.mishra2020a@vitstudent.ac.in",       //1st Years
+    "priya.mishra2020a@vitstudent.ac.in",
+    "pragya.awasthi2020@vitstudent.ac.in",       //1st Years
     "appledevelopersgroup@gmail.com"                  //Test Data
 ];
 
